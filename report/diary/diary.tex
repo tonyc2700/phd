@@ -1,0 +1,49 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\workingDate}{\textsc{2013 $|$ January $|$ 01}}
+\newcommand{\userName}{Anthony S Chapman}
+\newcommand{\institution}{University of Aberdeen}
+\usepackage{researchdiary_png}
+\usepackage{color}
+% To add your university logo to the upper right, simply
+% upload a file named "logo.png" using the files menu above.
+
+\begin{document}
+\univlogo
+
+
+
+\textcolor{red}{\Huge Date}
+\section*{section name} % (fold)
+\label{sec:section_name}
+
+% section section_name (end)
+
+\textcolor{blue}{\Huge 31 March 2015}
+\section*{Latent Growth Modelling and Lavaan} % (fold)
+\label{sec:latent_growth}
+Given that we don't actually know the growth rate, we can tell a simple regression model to try and come up with a relationship between this and the measurements. Remember that regressions just look at the relationship between observed data. A latent variable is a variable that is unknown, thus we can specify that growth rate is the unknown variable and use this to model growth. 
+
+Problem is that it's not easy for MICE to acknowledge Lavaan as a linear model when you pool the results.  
+% section latent_growth (end)
+\section*{Liner Mixed Effect (LME) Models} % (fold)
+\label{sec:liner_mixed_effec_}
+After speaking with one of my old Profs, I was suggested to use LMEs to find the growth trajectories. He also suggested that the LMEs could be used to find the missing values but I'm not so sure. We would like to use clustering for the detection of diseases, not statistical regressions. I believe they will be less bias this way as we won't specifically look for the solutions, we will look for any solution and arrive at the correct one. 
+
+I will look into it to see if it can me used with MICE in the missing data stuff. 
+% section liner_mixed_effec_ (end)
+\section*{Git Hub} % (fold)
+\label{sec:git_hub}
+I have realised that I have not been paying attention to keeping a record and backups of everything I'm doing and have. Git Hub is a great way to back-up my work and also means I can access my documents from where ever I am. 
+% section git_hub (end)
+\section*{Latex} % (fold)
+\label{sec:latex}
+It has been about six months since I last used \LaTeX and I have become rusty! This diary will be a good way for me to stay in tune with academic writing. 
+% section latex (end)
+\section*{Diary} % (fold)
+\label{sec:diary}
+This diary will keep track of my process and also help me record papers and documents which I have read and thought important or worth remembering. 
+% section diary (end)
+
+
+\end{document}

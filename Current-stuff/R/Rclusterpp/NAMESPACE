@@ -1,0 +1,8 @@
+useDynLib(Rclusterpp)
+export(
+	"Rclusterpp.hclust",
+	"Rclusterpp.package.skeleton",
+	"Rclusterpp.linkageKinds",
+	"Rclusterpp.distanceKinds",
+	"Rclusterpp.setThreads"
+)

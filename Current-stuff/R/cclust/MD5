@@ -1,0 +1,10 @@
+70bb4db2f1e24684cc19f89ecb61d26b *DESCRIPTION
+bf701e9ec37ff5218cb7280a5a28bb70 *NAMESPACE
+22507c26bcbe2342be6115ad024101d0 *R/Rindexes.R
+2a96deebb6ea56ef2c0499f183d43d98 *R/cclust.R
+2ac3060814f179a170677d2453560b43 *man/Rindexes.Rd
+0a5096f101aa66072bb77412643453a5 *man/cclust.Rd
+d13dc6669e3aa004324a57ec31b065f3 *man/predict.cclust.Rd
+b5219e351f3c999721cca24fabad13e3 *src/cclust.c
+a381eef5deb34f265fe4cfe3f33e1dbf *src/count.c
+a92235c4ff2f654d20abc8f228610d3d *src/median.c

@@ -1,0 +1,48 @@
+## Current packeges installed:
+## run R under super-user (sudo R)
+install.packages("package")
+  Amelia, mi, mice, mix (for mclust)
+  mclust, cclust, ClickClust, DynClust, NbClust, clv, mocca
+
+## other
+vim,miceadds,CALIBERrfimpute,baboon, clues,clue,bclust,emcluster,sensory
+ 
+------------------------------------------
+
+## Load package called "something"
+library(something)
+
+## Import SRSS (.sav) file
+library(foreign)
+db = "Data-for-George-and-Jeff-16-06-24.sav"
+dataset = read.spss(db, to.data.frame=TRUE)
+
+## Save table as CSV file
+write.csv(dataset, file="test.csv")
+
+## Delete a complete column called "col" of table called "ds" 
+ds$col <- NULL 
+
+## Delete rows with only NA values
+test[apply(test,1,function(x)any(!is.na(x))),]
+
+## Delete any row with any missing value
+foo <- na.omit(foo)
+
+## Count stuff
+ncol() and nrow() 
+
+## Turn type or col in ds to factor
+ds$col <- as.factor(ds$col)
+
+
+---- MICE stuff -----------
+# MICE function
+
+## Shows the pattern of missingness
+md.pattern(db)
+
+## Shows the missing relationship of pairs
+md.pairs(db)
+
+##

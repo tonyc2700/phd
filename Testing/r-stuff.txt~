@@ -1,0 +1,16 @@
+** Load package called "something"
+library(something)
+
+** Import SRSS (.sav) file
+library(foreign)
+db = "Data-for-George-and-Jeff-16-06-24.sav"
+dataset = read.spss(db, to.data.frame=TRUE)
+
+** Save table as CSV file
+write.csv(dataset, file="test.csv")
+
+** Delete a complete column called "col" of table called "ds" 
+ds$col <- NULL
+
+** Delete rows with only NA values
+test[apply(test,1,function(x)any(!is.na(x))),]
