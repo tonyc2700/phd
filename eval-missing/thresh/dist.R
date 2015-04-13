@@ -43,9 +43,32 @@ abdnEP <- toPerc(abdnEqual)
 # Get missing details for abdn min to miss
 abdnMin <- numNA(abdn,min)
 # Turn missing min to percentages
-abdnMP <- toPerc(abdnMin)  #<<<< Doesn't work coz we divide by sum of vector....
+# abdnMP <- toPerc(abdnMin)  #<<<< Doesn't work coz we divide by sum of vector....
 abdnMP <- abdnMin/2000
 # Plot graph
+# Change to percentages
+abdnMP <- abdnMP*100
+abdnEP <- abdnEP*100
 # plot <- plot(abdnEP, type="o", col="red")
-plot(abdnMP, type="b", col="red")
-lines(abdnEP, type="b", col="blue")
+
+jpeg('minmiss.jpg')
+
+plot(abdnMP, type="b", col="red",axes=FALSE,ann=FALSE)
+axis(1, at=1:10)
+axis(2, las=1, at=20*0:5)
+title(xlab="Number of not missing per record")
+title(ylab="Percentage of completeness")
+
+dev.off()
+
+jpeg('eqmiss.jpg')
+
+plot(abdnEP, type="b", col="blue",axes=FALSE,ann=FALSE)
+axis(1, at=1:10, lab=c("1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th"))
+axis(2, las=1, at=5*0:6)
+title(xlab="Column")
+title(ylab="Percentage of missingness")
+
+dev.off()
+
+
