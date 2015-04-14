@@ -1,0 +1,24 @@
+Background: 
+
+Missing data is a fact of life, due to a multitude of reasons ranging from fields being left blank to subjects dropping out of studies or ever data becoming corrupt do do unexpected data accidents, we are lefts with gaps in our datasets. No matter what field you are in, from petroleum mining, weather forecasting or paediatricians; it affects you.
+
+
+
+Methods:
+
+Using multiple imputation on missing dataset one can create an artificially complete dataset. This can work on numerical data such as growth or categorical data such as whether an individuals smokes of not. But how good is our new artificial dataset? Using cluster validation techniques we can test how close two datasets are from each other. A further verification of this can be obtained by cross referencing regression coefficients from the datasets to each other. 
+
+
+
+Results:
+
+I have as yet no real datasets but hopefully very soon I will have some to give the results, my hypothesis, of course, is that it will work but I am yet to prove it.
+
+Conclusions:
+
+This framework will tell us whether an artificially complete dataset can be obtained from an incomplete dataset. Regardless of your field of work, this affects you.
+
+
+
+Thank you for reading,
+Anthony Chapman.
