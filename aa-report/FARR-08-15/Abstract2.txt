@@ -15,3 +15,20 @@ Conclusions:
 This framework will perform data imputation and clustering analysis on the datasets and indicate the quality of an artificially complete dataset when created from an incomplete one. For instance, a confidence level, whether good or bad can be given by the framework when conducting research on such datasets. We hope that this framework can be further developed to be adapted to a wide range of health informatics problems, in which missing data become an issue for data analysis.
 
 Regardless of your field of work, this affects you.
+
+
+
+  It will make the approach more convincing if it is to be tested on a particular problem.  Only talking about missing data may not be enough.  For instance, people may wonder or even ask:
+
+       1. How would you test your approach (on what datasets, what problems)?  Is it on a particular kind of problems or benchmarks? 
+  
+       2. For different problems with different settings/scenarios from different domains (neonatal, children, disease analysis), how would you make your approach generally applicable to them? Do you need any adjustment for the approach to work on problems of various fields? What are the factors that could potentially affect your approach? 
+
+       3.  There have been other approaches dealing with missing values in many fields, what is the contribution/novelty of this research?  How would you compare those approaches with yours? 
+​
+       
+    The above questions are related to:
+
+              What are the research hypothesis? 
+              How would you validate the hypothesis? 
+              What are the experiments to be done?
