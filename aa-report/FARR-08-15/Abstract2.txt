@@ -1,0 +1,17 @@
+Background:
+
+Missing data are ubiquitous and become a fact of life. Due to a multitude of reasons, from computer errors to human ones, we are left with gaps in our datasets. Regardless of your field of work, from cancer research to paediatricians, it affects you. In this PhD project I focus on analysing neonatal data, which contains large amounts of missing data.
+
+Methods:
+
+Using data imputation techniques (e.g. multiple imputation) on datasets with missing values, one can create an artificially complete dataset. This works on numerical data such as growth as well as categorical data such as whether an individual smokes or not. Once we have such an artificial dataset, we can further evaluate how close these artificially complete datasets are to there true values. This can be achieved by employing cluster validation techniques. A further verification of the results can be obtained by cross referencing regression coefficients from the datasets to each other.
+
+Results:
+
+At this stage we are working towards linking maternity databases so that we can obtain real datasets of interest. This takes longer than expected due to data linkage approvals and other ethical issues. Despite the data linkage issues, we are currently working on some small neonatal datasets, which allow us to first develop a proof-of-concept computational framework. Once the data linkage is done, we will be able to test our approach on a larger scale. Our hypothesis is, of course, that these methods will indicate how realistic and reliable our new artificially complete datasets are.
+
+Conclusions:
+
+This framework will perform data imputation and clustering analysis on the datasets and indicate the quality of an artificially complete dataset when created from an incomplete one. For instance, a confidence level, whether good or bad can be given by the framework when conducting research on such datasets. We hope that this framework can be further developed to be adapted to a wide range of health informatics problems, in which missing data become an issue for data analysis.
+
+Regardless of your field of work, this affects you.
