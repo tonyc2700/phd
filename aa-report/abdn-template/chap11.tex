@@ -1,0 +1,50 @@
+\chapter{Evaluation and Conclusion}
+This chapter summarises and discusses the tasks accomplished, providing a critical evaluation of the work that was done.
+
+  \section{Evaluation} % (fold)
+  \label{sec:evaluation}
+  Looking back at the project goals and requirements, it is possible to say that almost all of them were successfully achieved. 
+  \begin{itemize}
+    \item \textbf{Understanding the principles behind the Particles Swarm Optimisation algorithm} The Particles Swarm Optimisation algorithm, its modeling background, algorithmic concepts and expansion designs were thoroughly studied and described in theory as well as through practical applications. This was an excellent introduction into the field of Swarm Optimisation algorithms and has shown great potential for the algorithms to be used in the financial domain. Although the system was implemented as research to see whether it is possible to use PSO to solve real world problems, the portfolio selection problem in this case, a new design was laid to form a stepping stone for implementing real-time processing and other essential propertied for the system to be effective in the real world.
+    \item \textbf{Understand the principles begin portfolio risk measure.} The amount of financial theory and background that had to be learnt was at times overwhelming, we at the computing society joke about about Google being our library, well  it certainly helped me find the recourses I needed throughout the project. I studied different types of ways to measure a portfolio's risk such as the Markowitz Model, Two-Sided Coherent Risk Measure, Value-at-Risk and Expected Short-Fall. Within these measures, there are helpers such as diversification, asset covariance, and expected return calculators. 
+    \item \textbf{Design an appropriate expansion to solve the portfolio selection problem.} Once I understood all I needed to be able to use the PSO algorithm, I needed to find a way to be able to use it to solve the portfolio optimisation problem. I took methods from measure theory, in mathematics, to be able to give the constraints a sense of distance and punish any deviation from the path they should be on. I was also able to design an appropriate expansion for the algorithm, even though due to time constraints I was unable to implement all of them. The clear design was laid out and it shouldn't be too hard to implement them.
+    \item \textbf{Test the resulting application and assess whether it can be used in a professional environment.} The testing and experimentation has shown stable and promising results. Firstly, it was verified that the system was stable in a sense of reliable and consistence results. Secondly, the scalability was tested and the results where promising for the PSO but my forced diversification did affect the results negatively when considering 20 or more assets. Finally, it is left to future testing whether it is possible to use real-time processing to improve the system.
+  \end{itemize}
+  % section evaluation (end)
+
+  \section{Testing Conclusion} % (fold)
+  \label{sec:testing_conclusion}
+    Chapter \ref{chap:testing}, \nameref{chap:testing}, has demonstrated that the algorithm is stable and efficient by testing the results in terms of quality and time it takes to run. The scalability of the PSO algorithm itself is very scalable, but the portfolio optimisation equation does have some scalability draw back, although they should not be to hard to fix. The internal parameters for the portfolio optimisation equation where tested and optimal values were found. Similarly for the some of the parameters of the PSO implementation and it's expansion where tested and evaluated. 
+
+    From these results we can conclude that this financial tool was implemented efficiently and it introduces ideas on how to apply optimisation algorithms to financial problems. In other words, it opens a door for other financial tools to be implemented. 
+  % section testing_conclusion (end)
+
+  \section{Problems encountered} % (fold)
+  \label{sec:problems_encountered}
+    \begin{itemize}
+      \item \textbf{Haskell being strong typed:} One problem I encountered when trying to embed the portfolio risk measure into Haskell was that because of the nature of Haskell, the function's type had to be clear and defined. This caused problems when trying to turn it into a fitness function for the PSO algorithm to understand. The problem was that the fitness function's type had to match what the PSO required. This was overcome by using partial functions composition and list comprehension. 
+      \item \textbf{Results are too small:} When experimenting and testing the system, the results where incredibly good. Unfortunately, drawing a nice graph for results which has a standard deviation of $10^{-13}$ is far to difficult for such a simple task. Tables are not as pretty, but they do get the job done. 
+      \item \textbf{Financial Background:} Prior to this project, I had never studying any type of finance or economics course. The amount of concepts that had to be learn was almost overwhelming. I found online lecture videos and this helped a huge amount, I tried to back-track as much as possible when I heard a new term in order to fully understand the problem and hence be more able to solve it.
+      \item \textbf{Project scale:} This is not necessarily a problem, but the more I learn about financial computing, the more I realise I need to learn more. I wish I had more time to implement the future ideas stated, although I know as soon as I start to implement these improvements, I will find more to implement.
+    \end{itemize}
+  % section problems_encountered (end)
+
+  \section{Discussion} % (fold)
+  \label{sec:discussion}
+  When I first discussed this project with my supervisor Dr. Wei Pang, I had no idea how vast the scope was, I had no idea how big this topic really is. I believe I could do a 4 PHD in this topic and I would not even begin to break the ice. I have had to learn huge amounts of new things. I have never studied any sort of finance or economics course. I have to say, watching many hours of online lectures from various universities helped an incredible amount in understanding complex concepts, as well as basic ones, in financial risk management.
+
+  This project has given me a renewed motivation to continue studying as well as directions of what to study. I believe the two things I need to learn more about if I want to continue improving this system are, more knowledge on asset risk measure and real-time processing. 
+  % section discussion (end)
+
+  \section{Conclusion} % (fold)
+  \label{sec:conclusion}
+  In conclusion, this project could be rated as a success. The research was an enlightening introduction into the world of evolutionary algorithms and their applications, specially the principles of the Particle Swarm Optimisation algorithm and how it can be applied in the real-world domain.
+
+  Most of the primary and secondary project goals were achieved. The modified PSO algorithm incorporates new principles for solving the portfolio selection problem and lots of designs have been stated on how to further improve this system. Dues to time and other commitment constraints, not all were implemented, but clear designs have been made and shown. The algorithm was tested on financial data and the results were satisfactory.
+
+  Many challenges were faced during the design and implementation stages of the improved algorithm; some alternative paths considered, Regardless, this research project has given me a valuable insight into the world of evolutionary algorithms, their principles and applications. The results gained from the testing have given me a more insight knowledge on the algorithm, it has taught me new facts about PSo and confirmed some previous known facts too.
+
+  There are plenty of opportunities for future development, I believe that this research project has opened a door for me to create something which I believe might change the way investment companies deal with portfolio selection.
+  
+  % section conclusion (end)
+

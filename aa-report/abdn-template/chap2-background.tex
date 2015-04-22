@@ -1,0 +1,154 @@
+\chapter{Background}\label{chap:background}
+  In order to expand and adapt existing Particles Swarm Optimisation methods, an initial background research has to be carried out to fully understand the concepts involved. Similarly to apply the algorithm to solve the portfolio optimisation problem, a deep understanding on how to formulate the problem in a way that the algorithm will understand will have to be made. 
+
+  This chapter describes the key concepts which I will use and eventually expand, implement and improve. Section~\ref{sec:particle_swarm_optimisation} provides the ideas and methods for PSO. Section~\ref{sec:portfolio_management} gives the background on how to use two-sided coherent risk measure\cite{two_sided_risk} to solve the portfolio selection problem. Section~\ref{sec:haskell} describes some of Haskell's attractions. 
+
+  % I plan to gain such knowledge by a mixture of methods including: past lecture slides, power-point presentations, research papers, online teaching videos and visiting the library as well as other ways.
+
+  \section{Particle Swarm Optimisation} % (fold)
+  \label{sec:particle_swarm_optimisation}
+    % Particle Swarm Optimisation (PSO) \cite{pso,pso2,pso3,pso4} is a metaheuristic inspired on the social behaviour of flocks of birds when flying and on the movement of shoals of fish. A population of entities moves in the search space during the execution on the algorithm. These entities perform local interactions (with other particles as well as the environment).
+
+    % Assuming worker bees are searching for a patch of flowers with the most pollen, also assume that the bees
+
+  Particle Swarm Optimization (PSO) is a population based stochastic optimization technique developed by Kennedy and  Eberhart in 1995, discovered through simplified social model simulation \cite{pso,pso2,pso3,pso4}. It simulated the behaviour of bird flocking involving the scenario of a collection of birds randomly looking for food in a search space. None of the birds know where the food is located, but they do know how far the food location is from their current positions. An effective technique for the birds to find food, was to adjust their velocity according to the birds which are nearest to the food. PSO was motivated from this scenario and was developed to solve complex optimization problems, where the optimum position of the fitness function is where the food is located and all the birds are the particles searching for this optimum position. 
+
+  An interesting thought is presented in \cite{pso} is that PSO can be used to model human social behaviour. One important difference, one that I find so fascinating, is its abstraction. It states that humans adjust not only their physical movements but also our cognitive position too; ``we tend to adjust our beliefs and attitudes to conform with those of our social peers''\cite{pso}. One of the major distinctions in this model compared to that of bird flocks or school's of fish is that collision works differently; ``two individuals can hold identical attitudes and beliefs without banging together, but two birds cannot occupy the same position in space without colliding''.
+
+  In the conventional PSO, the behaviour displays particles in a multidimensional space where each particles has two properties: a position vector and a velocity vector. Each particle $i$ in the swarm has the properties shown in (\ref{eq:PSO_stuff}):
+    % \begin{itemize}
+    %   \item $X_i^k$ : The current position of particle i at time k.
+    %   \item $V_i^k$ : The current velocity of particle i at time k. 
+    %   \item $Pbest_i^k$ : The personal best position of particle i at time k. 
+    %   \item $Gbest^k$ : The global best position of particle i at time k. 
+    % \end{itemize}
+    \begin{equation} \label{eq:PSO_stuff}
+      \begin{split}
+        & V_i^t \text{ : The velocity of particle i at time t.} \\
+        & X_i^t \text{ : The current position of particle i at time t.} \\
+        & Pbest_i^t \text{ : The personal best position of particle i at time t.} \\
+        & Gbest^t \text{ : The global best position of particle i at time t.} \\
+      \end{split}
+    \end{equation}
+    At each step, the velocity of the $ith$ particle will be updated according to the following equation:
+    \begin{equation} \label{eq:vel}
+      \begin{split}
+        V_{i}^{t+1} & = \omega V_{i}^{t} + c_1 r_1 \times \Big( Pbest_{i}^{t} - X_{i}^{t} \Big) + c_2 r_2 \times \Big( Gbest^{t} - X_{i}^{t} \Big) \\
+        \text{where} & \\
+        & V_i^{t+1} \text{ : The velocity of particle i at time t + 1.} \\
+        & V_i^t \text{ : The velocity of particle i at time t.} \\
+        & X_i^t \text{ : The current position of particle i at time t.} \\
+        & \omega \text{ : Inertia weight parameter.} \\
+        & c_1, c_2 \text{ : Acceleration coefficients.} \\
+        & r_1, r_2 \text{ : Random numbers between 0 and 1.} \\
+        & Pbest_i^t \text{ : The personal best position of particle i at time t.} \\
+        & Gbest^t \text{ : The global best position of any particle at time t.} \\
+      \end{split}
+    \end{equation}
+  In the updating process shown in Equation (\ref{eq:vel}) the acceleration coefficients $c_1, c_2$ ($c_1$ determines the importance of following the individual personal best whereas $c_2$ determines the importance of following the particle with the global best position)and the inertia weight $\omega$ (which states how stubborn a particle is at not deviating from their current path, regardless of their peer's results) are predefined, and $r_1, r_2$ (these introduce the concept of randomness so that a particles is able to switch between following their personal best and that of the whole swarm) are uniformly generated random numbers in the range [0,1].
+
+  The following algorithm \ref{eq:pso} is one of the standard PSO. The pseudo-code outlines the procedures implemented in \cite{haskellPSO}, it will be followed by an explanation on how it works.\\
+  \begin{algorithm}[H] \label{eq:pso}
+    \mbox{\textbf{Initialisation}} \\
+    \For{i = 1,\dots,S}{
+      initPosition(i) \\
+      initBestLocal(i) \\
+      \If{i = 1}{initBestGlobal()} 
+      \If{improvedGlobal(i)}{updateGlobalBest(i)} 
+      initVelocity(i)
+    }
+    \mbox{\textbf{Main program}} \\      
+    \While{not endingCondition()}{
+      \For{i - 1,\dots, S}{
+        createRnd($r_1,r_2$) \\
+        updateVelocity(i$,r_1,r_2$) \\
+        updatePosition(i) \\
+        \If{improvedLocal(i)}{updateBestLocal(i)}
+        \If{improvedGlobal(i)}{updateGlobalBest(i)}
+      }
+    }
+    \caption{PSO pseudo-code.}
+  \end{algorithm}
+  
+  In Algorithm~\ref{eq:pso}, $S$ is the number of particles in a swarm, one can see the pseudo-code for a standard PSO. A step by step explanation of Algorithm~\ref{eq:pso} is as follows: First, there is an initialisation for all the particles in the PSO, for every particle $i$, \textit{initPosition(i)} randomly creates a particle with a designated position in the search space. For the first step, \textit{initBestLocal(i) = initPosition(i)}, but it will be updated as more particles are initialised. Then the $if$ function makes a first global best and if any other particles has a better global best position, it will be set as the new global best. \textit{initVelocity(i)} gives particle $i$ an initial velocity which is randomly generated. 
+
+  After the initialisation, the core of the PSO method is executed. The core of the program will run until the \textit{endingCondition()} is satisfied, which can be the number of iterations or an improvement threshold. In the body of the \textit{While} loop, all particles are updated. The first step is to generate random numbers used in the velocity in Equation~(\ref{eq:vel}). Then the actual velocity is updated. In the next step,\textit{updatePosition(i)} updates the position of a particle in the search space and checks the fitness function value for improvement or not. At the end of the \textit{for} loop, if \textit{improvedLocal(i) = True} then the local best position is updated and finally if \textit{improvedGlobal(i) = True} then the global best position is updated.
+  % section particle_swarm_optimisation (end)
+
+  \section{Portfolio Optimisation} % (fold)
+  \label{sec:portfolio_management}
+  The term portfolio refers to a collection of investments such as stocks, bonds or other securities \cite{portfolio}. For this project we will focus on stocks or share, but it would be trivial to include other such securities into the application as they behave in a similar manner to stocks. Portfolio Optimisation is the process of choosing the proportion of various assets to be held (ie 20\% of asset A, 35\% of asset B, and so on) in a portfolio in such a way that any other choice would result in an equal or worst portfolio, here we have referred to the comparison of portfolio from the rate of return or the level of risk, ie one portfolio is better than another if it has a lower level of risk or higher rate of return. 
+
+  This project will focus on the two-sided coherent risk measure introduced in \cite{two_sided_risk}. This revolutionises how risk can be calculated as it takes into account both downside as well as upside risk in unison. Compared to previous risk measures this new measure has the following advantages:
+  \begin{itemize}
+    \item The whole domain loss distribution information is utilised, making it superior for finding robust and stable investment decisions.
+    \item Suitably selecting the combination coefficient and the order of the norm of the downside random loss, it is easy reflect the investor's risk attitude and to control the asymmetry and fat tails of the loss distribution.
+    \item It is easy to formulate and compute, therefore easier to apply to optimisation models.
+  \end{itemize}
+
+  Now this is where some mathematical background is needed, firstly let $E_Q |X|$ be the expected rate of return of portfolio $X$, now let $\| X \|_p = (E_Q |X|^p)^{\frac{1}{p}}$, $\|X\|_\infty = supremum \{ |X|\}$, $\sigma_p^{\pm} (X) = \|(X-E_Q[X])^{\pm}\|_p$, as described in \cite{two_sided_risk}. As already mentioned, this two-sided risk measure takes into account both sides of the loss distribution, so relative to the expected return value $E_Q[X]$, the random variable $(X-E_Q[X])^-$ is the ``downside risk'' of a portfolio, $X$, which according to \cite{two_sided_risk} might be more crucial to an application than the analogues ``upside risk'' variable $(X-E_Q[X])^+$.
+
+  This is where the name, \textit{two-sided risk measure}, comes from; it considers both sides or risk, downside and upside. Due to the way downside and upside risk can be represented and the monotonically increasing property of $\| \cdot \|_p$ with respect to p, the two-sided risk measure can be determined by the following equation:
+  \begin{equation} \label{eq:two-sided}
+    \begin{split}
+      & \text{For } 1 \leq p \leq \infty \text{ and } a \in [0,1] \\
+      \rho_{a,p}(X) & = a \sigma_1^+(X) + (1-a)\sigma_p^-(X) - E_Q[X ]\\
+      & = a \|(X-E_Q[X])^+\|_1 + (1-a) \|(X-E_Q[X])^-\|_p - E_Q[X] \\
+    \end{split}
+  \end{equation}
+
+  $\rho_{a,p}(X)$ in Equation~(\ref{eq:two-sided}) is generated by first taking the 1-norm of the positive deviation and the $p$-norm of the negative deviation and then taking the combination of these two norms. The inclusion of $- E_Q[X]$ in Equation~(\ref{eq:two-sided}) ensures that $\rho_{a,p}(X)$ is coherent \cite{two_sided_risk}. 
+
+  One of the advantages proposed for two-sided coherent risk measure was that it would be easy to reflect an investor's attitude towards risk, this is achieve by the variables $p,a$ in $\rho_{a,p}(X)$ in Equation~(\ref{eq:two-sided}). An investor's risk adverse attitude is represented by $p$, where the larger $p$ is, the more risk the investor is willing to take, so small $p$ low risk, large $p$ high risk. In Equation~(\ref{eq:two-sided}) $a$ is the factor controlling the balance between good and bad volatility \cite{two_sided_risk}, $a \to 0$ represents an investors' attitude towards good volatility and $a \to 1$ would be the opposite. Thus different investors might choose different values for $p$ and $a$.
+
+  A reader might not see how Equation~(\ref{eq:two-sided}) has much to do with optimising a portfolio from a first glance, a quick example will be shown to illustrate its use. Suppose we have $N$ assets to choose from and for $i \in [1,N]$ let $x_i \in [0,1]$ be the proportional weight of asset $i$ in the portfolio, let $r_i \in \mathbb{R}$ be a variable which represents the rate of return of asset $i$ and $\widehat{r}_i$ be the expected return of asset $i$. Then the rate of return of a portfolio can be expressed as $R = \sum_{i=1}^N x_i r_i$ and the expected return $\widehat{R} = \sum_{i=1}^N  x_i \widehat{r}_i$
+
+  From Equation~(\ref{eq:two-sided}) we can measure the risk of a portfolio as follows:
+  \begin{equation} \label{eq:portfolio-risk}
+    \begin{split}
+      \rho_{a,p}(R) & = a \|(R-\widehat{R})^+\|_1 + (1-a)\|(R-\widehat{R})^-\|_p - \widehat{R} \\
+    \end{split}
+  \end{equation} 
+  Now that there is a way to measure risk, the portfolio optimisation problem can be formulated as follows: \\
+  Minimise:
+  \begin{equation} \label{eq:portfolio-risk-min}
+    \begin{split}
+      \rho_{a,p}(R) \\
+    \end{split}
+  \end{equation} 
+  Subject to constraints:
+  \begin{equation} \label{eq:portfolio-risk-constraints}
+    \begin{split}
+      \widehat{R} = \eta \\
+      \sum\limits_{i=1}^N x_i = 1 \\
+      l_i \leq x_i \leq u_i
+    \end{split}
+  \end{equation} 
+
+  Equation~(\ref{eq:portfolio-risk-min}) refers to the minimisation of a portfolio's risk. Now we give an explanation for the constraints in Equation~(\ref{eq:portfolio-risk-constraints}), $\eta$ is the required rate of return of a portfolio, that is what the investor has to gain, this constraint ensures that the portfolio reaches its target return. The sum of $x_i$ ensures the investors do not buy more than what they can afford and also that the investor invests all the capital it can. Finally, $l_i$ and $u_i$ are lower and upper limits for how much proportion of each asset an investor is allowed to invest in, this is useful for diversification \cite{diversification}. 
+
+  % section portfolio_management (end)
+  
+  \section{Haskell} % (fold)
+  \label{sec:haskell}
+  This section briefly introduces the main attractions of the functional language Haskell. One big advantage of pure functional programming languages is that the absence of side-effects provides a clear semantic framework to analyse the correctness of programs and algorithms.
+
+  The core notion of functional programming is that a program is a mathematical function, it has an input and produces as output. Simple programs can be created easily and through function composition, more complex programs can be created with minimal effort.  
+
+  ``Real World Haskell'' by Don Stewart, Bryan O'Sullivan, and John Goerzen has been very useful in understanding how the language works and maximising any Haskell program's efficiency. Having a very strong mathematical background I often struggled to understand or accept very simple concepts in object-orientated languages such as Java or Ruby. Having been introduced to Haskell, I have endeavored to understand the language as best as I can. 
+
+  Haskell is one of the leading lazy evaluation languages in the functional programming community \cite{lazy}. Lazy evaluation is an strategy which delays the evaluation of each expression until the exact moment when it is actually required, this is indeed a powerful tool. Haskell is also a strongly typed language which includes polymorphism and high-order programming facilities. In addition, Haskell is able to work with arbitrarily large numbers, unlike most other languages, by default all numbers are set as \textit{Integer} which can contain arbitrary-precision integers. This feature ensures no overflow errors occur, unless the programmer changes the default. As this project is working over multi dimensional optimisation in finance, precision is important, thus Haskell suits this project very much.
+
+  List comprehension \cite{list_comp} is a syntactic construct for creating list based on existing lists. This is very useful given that we might store all expected return and rate of return values in lists. We can use list comprehension to formulate complex equations, such as calculating the expected portfolio return, which is $\widehat{R} = \sum_{i=1}^N  x_i \widehat{r}_i$, as in Section~\ref{sec:portfolio_management}, easily. The code could therefore be as follows: 
+  \begin{code}
+  expPortR :: [Double] -> [Double] -> Double
+  expPortR weight expRet = sum [ x*y | x <- weight, y <- expRet ]
+  \end{code}
+  The first line states the type which in this case mean, \textit{expPortR} is a function which takes in two list of type \textit{Double} and return a \textit{Double}. The first part of the second line gives names to the assigned lists, the lists which will be given to the function. The second part of the second line will sum up the corresponding expected returns with their given weights. 
+  % section haskell (end)
+
+  % \section{Multi-objective Optimisation} % (fold)
+  % \label{sec:multi_objective_optimisation}
+    
+  % % section multi_objective_optimisation (end)
+

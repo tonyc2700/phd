@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: abdnthesis.aux
+A level-1 auxiliary file: chap1-intro.aux
+A level-1 auxiliary file: chap2-background.aux
+A level-1 auxiliary file: chap3-related.aux
+A level-1 auxiliary file: chap4-problem.aux
+A level-1 auxiliary file: chap5-require.aux
+A level-1 auxiliary file: chap6-risk.aux
+A level-1 auxiliary file: chap7-methodology.aux
+A level-1 auxiliary file: chap8-design.aux
+A level-1 auxiliary file: chap9-test.aux
+A level-1 auxiliary file: chap10-future.aux
+A level-1 auxiliary file: chap11.aux
+The style file: plain.bst
+A level-1 auxiliary file: chap12-user.aux
+A level-1 auxiliary file: chap13-maintenance.aux
+Database file #1: myref.bib
+Name 1 in "Iterative Improvement Search Hill Climbing, Simulated Annealing, WALKSAT, and Genetic Algorithms" has a comma at the end for entry hill3
+while executing---line 1049 of file plain.bst
+Warning--empty booktitle in constriction_factor_4
+Name 1 in "Iterative Improvement Search Hill Climbing, Simulated Annealing, WALKSAT, and Genetic Algorithms" has a comma at the end for entry hill3
+while executing---line 1090 of file plain.bst
+You've used 38 entries,
+            2118 wiz_defined-function locations,
+            682 strings with 9070 characters,
+and the built_in function-call counts, 11462 in all, are:
+= -- 1063
+> -- 435
+< -- 21
++ -- 181
+- -- 136
+* -- 596
+:= -- 1761
+add.period$ -- 104
+call.type$ -- 38
+change.case$ -- 176
+chr.to.int$ -- 0
+cite$ -- 39
+duplicate$ -- 477
+empty$ -- 1089
+format.name$ -- 136
+if$ -- 2570
+int.to.chr$ -- 0
+int.to.str$ -- 38
+missing$ -- 18
+newline$ -- 183
+num.names$ -- 76
+pop$ -- 332
+preamble$ -- 1
+purify$ -- 144
+quote$ -- 0
+skip$ -- 419
+stack$ -- 0
+substring$ -- 581
+swap$ -- 155
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 152
+warning$ -- 1
+while$ -- 104
+width$ -- 40
+write$ -- 375
+(There were 2 error messages)

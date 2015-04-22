@@ -1,0 +1,31 @@
+\chapter{Risk Assessment}
+Section~\ref{sec:social} and Section~\ref{sec:project_based} describe possible risks which might affect the development of the project and some worries which must not be overlooked.
+
+  \section{Social Risk Assessment} % (fold)
+  \label{sec:social}
+    I do not refer to the term `Social' as a worry that I will be too sociable and not focus enough on my project. I simply mean ``stuff not directly to do with my project area''. The first thing that worries me is that I am reading a joint-honours degree in mathematics and computing science, almost all of my colleagues have nothing to do this term except their projects, where I have two more modules as well was this project. Most of them where smart enough to take an extra  ``padding'' module last term so they did not have to do anything else this term. I was unable to do that as I had to do my Mathematics dissertation and 3 other modules last term. 
+
+    Doing a join-honours degree has meant I have gotten much more out of studying here than most people but it also means I have had to learn (in terms of quantity) much more material. I worry that having to do these other two mathematics modules this term might affect my project or \textit{visa-versa}. I plan to work as long as I can on all subjects even if it mean burning the candle at both ends as it were. Careful planning of my days will help and I hope it will be enough to achieve the grades I desire and require. 
+  % section social (end)
+  \section{Project Based Risk Assessment} % (fold)
+  \label{sec:project_based}
+    \subsection{Haskell} % (fold)
+    \label{sub:haskell}
+      The nature of Haskell, as mentioned in Section~\ref{sec:haskell} in Chapter~\ref{chap:background}, is strongly typed meaning that the type of a function (ie input an \textit{int} and return \textit{bool}) is very important. Because of this, expanding the PSO implementation by \cite{haskellPSO} will be much more work that on other less typed languages, do to cascading effect. Changing just one tiny part of a Haskell function will meaning altering any function which use this function. Fortunately, you can define partial functions and use these for partially giving function inputs as a sort of mathematical abstraction. This is very useful for defining function to be used as inputs for the PSO. 
+    % subsection haskell (end)
+    \subsection{PSO} % (fold)
+    \label{sub:pso}
+      One thing that is a worry whenever trying to optimise any function is the possibility of becoming stuck in a local optimum value, and then mistaking that as the global optimal best solution. Randomness is key when dealing with such situations. This problem is solved by introducing randomness, not only to each particle's momentum but also to the initialisation of the swarm itself. This ensures that the swarm is able to search the whole domain and then determine the optimal value.
+
+      When evolutionary algorithms come across functions, such as $f(x)=\sum\limits_{i=1}^n -x_i sin(\sqrt{|x_i|})$ which was considered \cite{localmin} as a particularly hard function to optimise due to the number of local minima increases exponentially with the number of dimensions of the searching space, the danger might be that when it finds a certain local minima which might seem like a ``good enough'' solution, then the algorithm might converge to this false solution. Furthermore when what we are trying to optimise has local minima and global minima which differ by thousands of pounds worth of stocks when applied to financial situations it is crucial the algorithm does not get stuck in non-optimal solutions. 
+    % subsection pso (end)
+    \subsection{Portfolio} % (fold)
+    \label{sub:portfolio}
+      The current model has no notion of financial markets or knowledge of social economic climates, when the algorithm is given a portfolio to optimise, it will not look for or know of any problems that a company might be going through. It might be obvious that a company is going to crash any minute from now but if the system thinks, from previous financial data (and nothing more), that the company seems profitable then it will tell the user to invest in the company. One way to help this problem is introducing semantic web engineering into the system, this is not something I will be able to do or even look into in this project but the idea of it does seem both plausible and worth worth while for future developments.
+    \subsection{Finance} % (fold)
+    \label{sub:finance}
+      This project required large amounts of finance background or knowledge. I have never studied or read any sort of financial theory or concepts. A worry is that I will have to learn more than the ideal amount when doing a short term project such as this, made even shorter by the amount of other modules I have to study at the same time, not to mention the time spent dealing with what to do in the future, ie. applying for jobs, masters etc.. 
+    % subsection finance (end)
+    % subsection portfolio (end)
+
+  % section project_based (end)

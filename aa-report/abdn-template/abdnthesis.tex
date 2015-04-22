@@ -1,0 +1,81 @@
+\documentclass[bsc,doublespace]{abdnthesis}
+
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm}
+\usepackage{color} 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithm2e}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{setspace}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.fractals}
+\usepackage{mdwlist}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small}
+\DefineVerbatimEnvironment{example}{Verbatim}{fontsize=\small}
+\newcommand{\ignore}[1]{}
+
+\newtheorem*{defn}{Definition}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{exa}{Example}
+\newtheorem*{no}{Note}
+
+\graphicspath{ {./Figures/} }
+
+\title{Particle Swarm Optimisation \\ to solve the Portfolio Selection Problem \\ in a Function Based Environment \\~\\ Joint-Honours (30 Credit Course)}
+\author{Anthony Sergio Chapman}
+\Supervisor{Dr Wei Pang}
+\school{Department of Computing Science}
+\date{2014}
+
+\def\sfthing#1#2{\def#1{\mbox{{\small\normalfont\sffamily #2}}}}
+\sfthing{\PP}{P}
+\sfthing{\FF}{F}
+
+\begin{document}
+
+\maketitle
+
+\makedeclaration
+
+\begin{abstract}
+  This research project aims to investigate how the Particle Swarm Optimisation (PSO) algorithm could be applied for multi-dimensional optimisation in a real-world domain, namely finding an optimal portfolio to invest in, given a set of assets and their expected returns. The Particle Swarm Optimisation algorithm, created by James Kennedy and Russell Eberhart, belongs to the field of Swarm Intelligence. It uses a collection of particles (a swarm) to explore a given search space for an optimal value. To be able to solve the portfolio optimisation problem, a way to measure and compare different portfolio had to be created. Using two-sided coherent risk measure, created by Zhiping Chen and Yi Wang, and concepts from mathematics, measure theory, the portfolio optimisation problem turned into a function which the PSO algorithm is able to optimise. 
+
+  The main goal of this project is to create a reliable method for computing and comparing a portfolio's success or failure in order for the algorithm to be able to find an optimal one. Secondary goals such as experimenting and expanding the PSO algorithm were also achieved. Finally, the effectiveness of the resulting approach was assessed through experimentation and different parameter settings. The report shows the background research, design, implementation, testing and experimentation with the expanded Particle Swarm Optimisation algorithm. 
+\end{abstract}
+
+\begin{acknowledgements}
+  Firstly, I would like to thank my supervisors, Dr. Wei Pang, for providing help and support throughout the whole project. His advice, enthusiasm and knowledge of the field have always pointed me in the right direction with the research. 
+
+  Secondly, I would also like to thank Dr. Fernando Rubio, from U.C.M., for proving additional support for expanding the Haskell PSO implementation and finding time to answer my inquiries. 
+
+  Lastly, thanks to all my 205 buddies and Marmalade for providing moral support and advise at all hours of the day and night.
+\end{acknowledgements}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\include{chap1-intro}
+\include{chap2-background}
+\include{chap3-related}
+\include{chap4-problem}
+\include{chap5-require}
+\include{chap6-risk}
+\include{chap7-methodology}
+\include{chap8-design}
+\include{chap9-test}
+\include{chap10-future}
+\include{chap11}
+
+\bibliographystyle{plain}
+\bibliography{myref}
+
+\appendix
+\include{chap12-user}
+\include{chap13-maintenance}
+
+\end{document}

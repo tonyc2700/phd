@@ -1,0 +1,37 @@
+\chapter{Introduction\label{chap:intro}}
+This section provides an overview of the project and explains the basic principles of the initial approach and ideas for expansion. It contains a list of primary and secondary goals as well as motivation for carrying out this research.
+
+  \section{Overview} % (fold)
+  \label{sec:overview}
+  Swarm Algorithms that belong to the Swarm Intelligence Systems were inspired by the behaviour of ant colonies, bird flocking, animal herding, bacterial growth, and fish schooling. As flocks of birds, the artificial swarm is able find an optimal location through communication with local agents as well as the environment. Swarm Algorithms have proven to be effective in providing ways to find global optima in potentially troublesome search spaces. The techniques used in Swarm Intelligence Systems closely related to artificial intelligence and are often applied to simulations, robotics and optimisation problems. 
+
+  The Particle Swarm Optimisation algorithm belongs to the field of Swarm Intelligence Systems and optimizes a problem by having a population of candidate solutions, called particles, moving these particles around in the search-space according to simple mathematical formula over the particle's position and velocity, shown in Equation~(\ref{eq:pso}). Each particle's movement is influenced by its local best known position but is also guided toward the best known positions in the search-space, which are updated as better positions are found by other particles. Originally, PSO was designed to simulate bird flocking behaviour \cite{pso}, it was later discovered that it would be used to find optimal positions, such as a flock of pigeons finding food in a large city.
+
+  Portfolio optimisation lies at the heard of investment banking. A novel way to measure a portfolio's risk using both upside and downside risk measure was introduced by Zhiping Chen and Yi Wang. In order to make this into something that the PSO can optimise, I took methods from measure theory to given a sense of distance or deviation when any constraint is violated. I introduced a penalty value to exaggerate this deviation and force the algorithm to boycott results with such a deviation.
+  % section overview (end)
+
+  \section{Motivation} % (fold)
+  \label{sec:motivation}
+  Over the past twenty years the amounts of data that is being produced by the financial market have increased drastically, it is essential to use efficient algorithms to analyse such data. The Particle Swarm Optimisation algorithm has already been effectively used in various applications, mainly  biomedical, clustering, and modeling. However, the use of PSO to find optimal values when trading stocks or other securities has not been exploited thoroughly enough. Given that dealing with the financial market requires dealing with vasts amounts of numerical data, I believe one can formulate complex financial concepts, such as optimising a portfolio, and apply PSO to solve them. The PSO algorithm could potentially be applied to various systems and applications to a wide range of domains and an application to solve the portfolio selection problem could start a new generation of evolutionary financial solutions. 
+  
+  This idea was greatly inspired by both my supervisor, by introducing me to the world of evolutionary algorithms, and a recently discovered way to measure a portfolio's risk \cite{two_sided_risk}. The author provides a comprehensive overview of portfolio risk measurement, describing how it can be used to optimise a portfolio.
+  % section motivation (end)
+
+  \section{Primary Goals} % (fold)
+  \label{sec:primary_goals}
+  A list of primary goals which need to be completed in order to classify the research project as a success.
+  \begin{itemize}
+    \item Understand the principles behind Particle Swarm optimisation.
+    \item Design an appropriate expansion to solve the portfolio selection problem.
+    \item Understand the principles begin portfolio risk measure.
+    \item Test the resulting application and assess whether it can be used in a professional environment.
+  \end{itemize}
+  % section primary_goals (end)
+
+  \section{Secondary Goals} % (fold)
+  \label{sec:secondary_goals}
+  Secondary goals could be added to the project depending on time-constraints and success of completing the primary goals.
+  \begin{itemize}
+    \item Compare my implementation to that of an investment manages. 
+    \item Write a simple GUI for the application.
+  \end{itemize}

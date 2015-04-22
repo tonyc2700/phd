@@ -1,0 +1,131 @@
+\documentclass[]{report}
+\title{Maintenance Manual}
+\author{Anthony Chapman}
+\date{2014}
+
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm}
+\usepackage{color} 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithm2e}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{setspace}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.fractals}
+\usepackage{mdwlist}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small}
+\DefineVerbatimEnvironment{example}{Verbatim}{fontsize=\small}
+\newcommand{\ignore}[1]{}
+
+\begin{document}
+
+\maketitle
+
+The source code of the PSO and portfolio optimisation (together with an example asset file) could be found in the `source' folder in project submission.
+
+\section*{Haskell Requirements}
+You will need the latest version of Haskell and it can be downloaded from \textit{http://www.haskell.org/platform/}. \textit{Notepad++} would be my preferred Windows editor and can be installed for free from \textit{http://notepad-plus-plus.org/download/v6.6.2.html}
+
+\section*{Instructions on how to compile and run the algorithm:} 
+  Makes sure that the source Haskell files (portOpt.hs, PSO.hs) are located in the same folder as the asset data files you wish to use for the portfolio.
+  \\\underline{To compile and run the code on a Windows environment:}
+  \begin{enumerate}
+    \item Open a command line and move to the folder containing the source files, ie the Haskell code.
+    \item Type the following command into the command line and press enter:
+  \suspend{enumerate}
+  \begin{center} \% ghc --make portOpt.hs \end{center}
+  \resume{enumerate}
+    \item You have now created an executable file, called `portOpt.exe'
+    \item Open a windows folder and move to the folder containing the source files, double click on `portOpt.exe'
+    \item The program will stat in a new window.
+  \end{enumerate}
+  The User Manual provides a guide for using the program.
+  \\\underline{To compile and run the source code on a Unix/Linux environment:}
+  \begin{enumerate}
+    \item Open a terminal and move to the folder containing the source files, ie the Haskell code.
+    \item Type the following command into the terminal and press enter:
+  \suspend{enumerate}
+  \begin{center} \% ghc -O2 --make portOpt.hs -threaded -rtsopts \end{center}
+  \resume{enumerate}
+    \item You have now created an executable file, now type into the terminal the following and press enter:
+  \suspend{enumerate}
+  \begin{center} \% ./portOpt \end{center}
+  \resume{enumerate}
+    \item The program will start in the same terminal window.
+  \end{enumerate}
+  The User Manual provides a guide for using the program.
+
+\section*{Organisation of System Files, including directory structures} 
+  \begin{code}
+    chapman_anthony/
+        executables/ - folder containing executable files for portfolio optimisation 
+            portOptWin.exe
+            portOptUnix
+            assetTest.txt - an example asset file
+        source/ - folder containing source code files for portfolio optimisation
+            portOpt.hs
+            PSO.hs
+        readMe.txt
+        MaintananceManual
+  \end{code}
+
+\section*{Space and Memory Requirements}
+  2 GB of RAM, 100 MB of space would be recommended.
+
+\section*{List of source code files, with a summary of their role}
+  \begin{tabular}{|l|l|}
+    \hline
+    File & Description \\
+    \hline
+    portOpt.hs & Portfolio optimisation implementation using PSO \\
+    \hline
+    portOptUnix & Unix executable file \\
+    \hline
+    portOptWin.exe & Windows executable file \\
+    \hline
+    PSO.hs & Main PSO optimisation module \\
+    \hline
+    assetTest.txt & Example asset file \\
+    \hline
+  \end{tabular}
+
+\section*{Program Flow} 
+  This section provides a general description of the program flow from a technical side. \\
+  \textbf{Initialisation} \\
+  Once the input parameters are defined, the body of the function is created. Firstly, we use a function \textit{initialize} to randomly create the list of initial particles. It needs to create the number of particles the user specified at the beginning of the program randomly distributed inside the search space defined by the boundings, in our case it is the the variable \textit{weightBounds} and it is currently set to a minimum of 0.05 and a maximum of 0.35, this represents the minimum and maximum percentage (5\% to 35\%) every asset in a portfolio has to be obtained. The algorithm needs adjustment velocity parameters which are given by \textit{wpg1}, these are used to control the particles' new velocities once they are updated. 
+
+  \textbf{Optimisation} \\
+  Once the particles are initialised, the function \textit{pso'} deals with the iterations of the algorithm, the number of iterations was defined at the beginning of the program by the user. Note that each particle contains its position, its velocity, the best solution found by the particle, and the best solution found by any particle. \textit{pso'} runs recursively on the number of iterations, if there are no more iterations to be performed then it just returns best particle found. Otherwise, it applies one iteration step (by using an auxiliary function \textit{oneStep}) and then it recursively call itself with one iteration less.
+
+  After each step, each particle is updated using a function \textit{updateParticle}, it applied the new velocity equation described in Chapter 2. \textit{updateParticle} also checks if the fitness of the new position is better than the personal and global best found so far. 
+
+  % \textbf{Results} \\
+
+\section*{Changing Parameters}
+  \textbf{Changing WPG Parameter}\\
+  These acceleration coefficients are defined at the beginning of portOpt.hs:
+  \begin{code}
+    wpg1 :: (Double,Double,Double)
+    wpg1 = (-0.16,1.89,2.12)
+  \end{code}
+  \textbf{Changing Penalty Parameter} Note: changing penalty parameter, \textit{penPara}, will automatically change the penalty value, \textit{penVal}.
+  \begin{code}
+    --Penalty parameter
+    penPara = 0.1
+    --Penalty value
+    penVal = 1/penPara
+  \end{code}
+  \textbf{Changing the Boundaries}
+  \begin{code}
+    --Weight bound is set to this to induce diversification
+    weightBounds = replicate nAssets (0.05,0.35)
+  \end{code}
+  \textbf{Changing the Output File Name} Here, \textit{time t} gives the date as a string and then that string is concatenated to the end of the another string \textit{``output''}.
+  \begin{code}
+    appendFile ("output-" ++ (time t))
+  \end{code}
+
+\end{document}

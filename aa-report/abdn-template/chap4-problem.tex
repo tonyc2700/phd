@@ -1,0 +1,49 @@
+\chapter{Problem Domain}
+  In this chapter I will discuss some reasons why I believe this is a worth while project. I will mention what methods I intend to implement and for what reasons. It will then follow by a brief section describing my approach, although the full description of the actual approach taken is document in Chapter~\nameref{chap:design}.
+  
+  Particle Swarm Optimisation has already been effectively implemented to solved various optimisation problems \cite{pso_app,pso_app2,pso_app3} in variant domains such as biomedical, networks, clustering, finance, combinatorial optimisation and many more \cite{pso_app_main}. 
+
+  This project mainly focuses on expanding the implementation created by Rabanal, Rodrigues and Rubio in their paper ``A Functional Approach to Parallelize Particle Swarm Optimization'' and more importantly, its application to solve the portfolio optimisation problem \cite{marko2}. The optimisation algorithm has been successful by means of accuracy as well as efficiency \cite{haskellPSO}, and when millions of pounds are at stake, choosing the right portfolio to invest in is extremely important, meaning that choosing the right algorithm is even more crucial.
+
+  \textbf{Why PSO.} I have chosen to use PSO as it is better than other familiar optimisation techniques such as the simplex method or hill climbing. It does not risk becoming stuck in local optima like the others. It out-performs the others with incredible efficiency when the optimisation function is over higher dimensional fields. 
+
+  \textbf{Why Portfolio.} It is a fundamental problem in finance, making it an ideal candidate to test PSO's capabilities. As already mentioned, there is a lot of money at stake, so making tools which are efficient in helping people make these multi-million decisions would definitely be worth the hard work. After some brief searching, I noticed that there is not that much information in this field out there, making this a novel and exciting topic. This two-sided coherent risk measure is a well defined function and compatible with PSO function format. 
+
+  \textbf{Why Haskell.} Firstly, Haskell is a passion for me, it has scared so many yet intrigues a few. Apart from its syntactical charm (subjective I know), there are many benefits, specially when working with mathematical applications. Haskell has been given by default to work with arbitrary large number calculation, this will help against overflow problems which are ever so common with most languages. The functional nature of Haskell makes it effortless to formulate complex mathematical equations \cite{haskellPSO}. Other extra influences are that it has a great online community, very friendly and helpful, or lazy evaluation and function and partial function composition. 
+
+  \section{Approach} % (fold)
+  \label{sec:approach}
+  This is a research project aimed at designing and evaluation a possible tool to solve the portfolio optimisation problem through the use of particle swarm optimisation. A possible expansion to the PSO implementation \cite{haskellPSO} will also be considered and attempted. The new concept for improving the PSO implementation might be through the use of constriction factors and self-termination described in Chapter~\ref{chap:design}. Just as important as the optimisation method, we need to formulate the portfolio optimisation problem in such a way that it can be optimised by the algorithm. I will take ideas from a revolutionary way to measure a portfolio's risk \cite{two_sided_risk} written by Zhiping Chen. Although Chen completely rethinks the concept of measuring risk by taking into account both upside and downside risk, some work needs to be done to be able to transform this into a function which the PSO algorithm will be able to optimise given that his work does not take into account the constraints which have to be satisfied, such as no short-selling or meeting a target expected return.
+
+  As this is a research project for testing whether it is possible to solve the portfolio optimisation problem through PSO, the application will use simulation (offline) data instead of real-time streams. It is not too much a stretch of the imagination to be able to implement real-time processing as all the financial information is based on previous data. Changing a function, expected return for example, to recalculate its value after new data has come through would be trivial due to Haskell's function composition. 
+
+  One of the main novelties of this project is the use of penalty functions in addition to the two-sided risk measure. The use of a penalty value means one can formulate various constraints into a way that can be implemented for the PSO to understand. We use a penalty value to penalise any deviation from the constraints. This also means we need a way to turn deviation from the constraint into a distance measure, this is straight forward given the constraints are linear. 
+
+  For further implementation and design details, including the reasoning behind the decision, please refer to \nameref{chap:design}.
+  % section approach (end)
+
+
+  % \begin{itemize}
+  %   \item PSO
+  %   \begin{itemize}
+  %     \item Better than simplex at higher dimension optimisation
+  %     \item Good at not becoming stuck in local optima
+  %     \item Much better at optimisation than humans!!!
+  %   \end{itemize}
+  %   \item Portfolio
+  %   \begin{itemize}
+  %     \item Fundamental problem in finance
+  %     \item Good to test PSO
+  %     \item Loads of money at stake
+  %     \item Not that much out there
+  %     \item Suited well for PSO
+  %   \end{itemize}
+  %   \item Haskell
+  %   \begin{itemize}
+  %     \item Arbitrary large number calculation
+  %     \item Functional nature is great for programming mathematical problems efficiently
+  %     \item Lazy evaluation implies efficient use of resources
+  %     \item Good online community
+  %   \end{itemize}
+  % \end{itemize}
+

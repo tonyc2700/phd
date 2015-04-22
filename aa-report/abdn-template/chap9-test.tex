@@ -1,0 +1,341 @@
+\chapter{Experimentation and Testing}\label{chap:testing}
+This chapter shows the results of some of the tests I made, during the implementation I tested every function independently and then tested the full program after all the sub-programs where merged together. This project is not primarily about testing the PSO algorithm, it is more about testing whether we can use it to solve the portfolio selection problem and whether it is safe to use. 
+
+I condensed greatly the amount of data collected. I ran many tests, within each test there were many sub-test and each sub-test was ran 30 times. From this I calculated means and standard deviations which are used to give readable results. Overall there are about 7 files which represent test cases, each file contains the results for the sub-tests all grouped together and these files are each about 500 lines long.  
+  \section{Scalability} % (fold)
+  \label{sec:scalability}
+    Unfortunately, I hindered the system by insisting that the minimum percentage of any asset in the portfolio is 5\% and the maximum is 35\%. This means that after 20 assets, the system stops giving credible results, as you can notice, if we have 21 assets and each one has to be at least 5\%, then we will end up have 105\%, which of course makes no sense. It will be essential to implement a better diversification technique if I plan to consider a large amount of assets. 
+
+    This problem has nothing to do with the PSO algorithm, the algorithm has proven to be efficient even around 60 dimensional search spaces, this depends on the nature of the optimisation function of course. 
+  % section scalability (end)
+
+  \section{Precision} % (fold)
+  \label{sec:precision}
+  These tests should verify that the system is stable, by this I mean that given the same input, the output should be almost the same. A there is a lot of randomness in the algorithm, one can not expect the outputs to be equal, but they should be equivalent up to some threshold. In this case the threshold will be $1.0\times10^{-8}$, this small enough to not affect the expected return from a optimised portfolio. 
+
+    \subsection{Testing Strategy} % (fold)
+    \label{sub:testing_strategy}
+      I will run nine tests and record the expected rate of return for the solution the algorithm gives. Each of the nine tests will be run 30 times with a mean and standard deviation calculated and shown in the following sections. The nine tests will be as follows:
+        \begin{itemize}
+          \item Test 1: PSO 20 particles, 100 iterations, 5 assets
+          \item Test 2: PSO 20 particles, 300 iterations, 5 assets
+          \item Test 3: PSO 40 particles, 100 iterations, 5 assets
+          \item Test 4: PSO 20 particles, 100 iterations, 7 assets
+          \item Test 5: PSO 20 particles, 300 iterations, 7 assets
+          \item Test 6: PSO 40 particles, 100 iterations, 7 assets
+          \item Test 7: PSO 20 particles, 100 iterations, 10 assets
+          \item Test 8: PSO 20 particles, 300 iterations, 10 assets
+          \item Test 9: PSO 40 particles, 100 iterations, 10 assets
+        \end{itemize}
+    % subsection testing_strategy (end)
+
+    \subsection{Hypothesis} % (fold)
+    \label{sub:hypothesis}
+      My hypothesis is that the application is reliable and that the results (for the same input) will have almost the same output, ie it is reliable and precise, up to the threshold already stated. 
+    % subsection hypothesis (end)
+
+    \subsection{Results} % (fold)
+    \label{sub:results}
+      Table~\ref{table:expected_results} show the results for the 9 tests.
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            Test 1 & 0.0447 & $6.13954\times10^{-11}$ \\
+            \hline
+            Test 2 & 0.0447 & $1.58041\times10^{-17}$ \\
+            \hline
+            Test 3 & 0.0447 & $7.18283\times10^{-13}$ \\
+            \hline
+            Test 4 & 0.0527 & $3.3924\times10^{-10}$ \\
+            \hline
+            Test 5 & 0.0527 & $1.41115\times10^{-16}$ \\
+            \hline
+            Test 6 & 0.0527 & $6.83323\times10^{-13}$ \\
+            \hline
+            Test 7 & 0.101475 & $0.00279292$ \\
+            \hline
+            Test 8 & 0.1007 & $2.30303\times10^{-12}$ \\
+            \hline
+            Test 9 & 0.1007 & $2.56085\times10^{-11}$ \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:precision}, expected return.}
+          \label{table:expected_results}
+        \end{table}
+      As you can see from Table~\ref{table:expected_results} all of the standard deviations are less than $1.0\times10^{-8}$ which was our threshold, except Test 7. This is a very good sign as we have only given PSO 100 iterations to complete its task and when we increase this to 300, the results are by far below the threshold. 
+
+      The only reason Test 7 did not pass is because increasing the number of assets to 10 whilst only letting the algorithm run for 100 steps and only 20 particles was just to much. Remember that each asset represents a dimension, so in Test 7, the algorithm have 100 steps with 20 agents to search for an optimal value in a 10 dimensional search space.
+    % subsection results (end)
+
+    \subsection{Conclusion} % (fold)
+    \label{sub:conclusion}
+    From the results and our test strategy, we can conclude that the algorithm is reliable by means of precision. To be safe, we will have a minimum cap of 100 particles and 1000 iterations. This will be enough to ensure consistency for the average investment manager.       
+    % subsection conclusion (end)
+  % section precision (end)
+
+  \section{Constriction Factors} % (fold)
+  \label{sec:constriction_factors}
+  In System Design and Architecture~\ref{sub:constriction_factor} the concept of a constriction factor was introduced. 
+    
+    \subsection{Testing Strategy} % (fold)
+    \label{sub:testing_strategy}
+      I plan to test whether this will in fact affect the outcome of the algorithm when applied to the portfolio optimisation problem, furthermore if it does affect it, then whether it improves or worsens the result. In order to test this I will conduct six different experiments, three without a constriction factor where one has the adjustment parameters taken from \cite{constriction_factor_3}, one with the two randomness coefficients that add up to less than 4 and one where they add up to more than 4, the importance of 4 can be read in \cite{constriction_factor}. Then three more with a constriction factor and the rest is the same as the previous three.
+
+      All tests will run 20 times and the results and the time taken will be recorded, all tests will be set to 50 particles, 500 iterations and 10 assets. A mean result and standard deviation will be computed to be able to compare the results. This will give enough indication on how the constriction factor affects the fitness function and how it differs under various criteria.  
+    % subsection testing_strategy (end)
+
+    \subsection{Hypothesis} % (fold)
+    \label{sub:hypothesis}
+      Constriction factor when applied to the portfolio selection problem with appropriate coefficients will not improve the portfolio selection problem.
+    % subsection hypothesis (end)
+
+    \subsection{Results} % (fold)
+    \label{sub:results}
+      This subsection shows the results and the following Table~\ref{table:constriction_factor_results} contains the exact values for the results in my experiment, it will follow a short explanations of the results. 
+
+      Firstly, the time it took for each test to run and there was no significant difference between them. Having a constriction factor did not affect the time it takes for the algorithm to complete. 
+
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            WO-CF Pefersen & 0.914099 & $1.61088\times10^{--16}$ \\
+            \hline
+            WO-CF $<$ 4 & 0.914099 & $1.72748\times10^{-16}$ \\
+            \hline
+            WO-CF $>$ 4 & 0.9141 & $5.36229\times10^{-6}$ \\
+            \hline
+            W-CF Pefersen & 0.91415 & 0.0000389374 \\
+            \hline
+            W-CF $<$ 4 & 0.91416 & 0.0000448388 \\
+            \hline
+            W-CF $>$ 4 & 0.914099 & $2.81328\times10^{-16}$ \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:constriction_factors}.}
+          \label{table:constriction_factor_results}
+        \end{table}
+
+      Table~\ref{table:key_constriction_factor_results} shows what the acronyms in Table~\ref{table:constriction_factor_results} mean. 
+
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{ l l }
+            WO-CF Pefersen & : Without constriction factor and Pefersen coefficients  \\
+            WO-CF $<$ 4 & : Without constriction factor and $\phi < 4$ \\
+            WO-CF $>$ 4 & : Without constriction factor and $\phi > 4$ \\
+            W-CF Pefersen & : With constriction factor and Pefersen coefficients  \\
+            W-CF $<$ 4 & : With constriction factor and $\phi < 4$ \\
+            W-CF $>$ 4 & : With constriction factor and $\phi > 4$ \\
+          \end{tabular}
+          \caption{Key for \nameref{table:constriction_factor_results}.}
+          \label{table:key_constriction_factor_results}
+        \end{table}
+
+      The reason for using Pefersen coefficients is stated in the design and architecture section of this report, \nameref{eq:cf} in \nameref{sec:original_pso_implementation}. One can see from Table~\ref{table:constriction_factor_results} that importance having $\phi > 4$ when introducing the constriction factor, in W-CF Pefersen and W-CF $<$ 4 one can see a serious decrease in the optimum found. 
+
+      What is interesting here is that PSO for the fitness function is efficient and consistent without the constriction factor as shown in Table~\ref{table:constriction_factor_results} where WO-CF Pefersen and WO-CF $<$ 4 both have the same mean and almost exact standard deviation, meaning they behave the same. Once we introduce the constriction factor, it is almost catastrophic if we do not have $\phi > 4$, as both W-CF Pefersen and W-CF $<$ 4 have less efficient means and huge standard deviations (in comparison to the other tests) meaning they are unstable and unreliable. Once we make $\phi > 4$, the algorithm settles back to normal but does display higher standard deviation. 
+    % subsection results (end)
+    \subsection{Conclusion} % (fold)
+    \label{sub:conclusion}
+      Constriction factor when applied to the portfolio optimisation problem does not improve the results as in the hypothesis. It makes the results more unstable, the algorithm will therefore not include a constriction factor. 
+
+      The use of the constriction coefficient can be viewed as a recommendation to the particle to ``take smaller steps''\cite{constriction_factor_4}, because of this it exploits optimal solutions, which is fine if there are not many, but it does mean that it travels less in the same amount of time. This is one of the main reasons why it did not improve the results. One has to bare in mind that each asset adds a dimension to out search space, this increases domain exponentially so as you increase the amount of assets in a portfolio coupled with making the PSO take smaller steps results in a much larger search space and less area covered by the end of the algorithm. 
+       
+    % subsection conclusion (end)
+
+      % \begin{align}
+      %   V_{i}^{k+1} & = K \Bigg[ V_{i}^{k} + c_1 r_1 \times \Big( Pbest_{i}^{k} - X_{i}^{k} \Big) + c_2 r_2 \times \Big(Gbest_{i}^{k} - X_{i}^{k} \Big) \Bigg] \\
+      %   \text{where } \\
+      %   K & = \frac{2}{\mid 2 - \phi - \sqrt{\phi^2 -4\phi} \mid}  \\
+      % \end{align}
+
+  % section constriction_factors (end)
+
+  \section{Penalty value} % (fold)
+  \label{sec:penalty_value}
+  This experiment will see what happens with different penalty parameters. The penalty value, as explained in Section~\ref{sub:penalty_function} from Chapter~\ref{chap:design} is what ensures that the constraints in Equation~(\ref{eq:portfolio-risk-constraints}) are not violated. If the penalty is too small, it will not ensure that the constraints are kept, but if it is to large, then it might not let the algorithm settle on the optimal solution. The aim is to find a suitable penalty parameter. 
+
+    \subsection{Testing Strategy}
+      There will be 3 tests, each test will be run 30 times and an average and standard deviation calculated. This should ensure enough range to be able to find an adequate value.
+      \begin{itemize}
+        \item Test 1: PSO 100 particles, 1000 iterations, 10 assets, Pen Val = 0.01
+        \item Test 2: PSO 100 particles, 1000 iterations, 10 assets, Pen Val = 0.1
+        \item Test 3: PSO 100 particles, 1000 iterations, 10 assets, Pen Val = 1.0
+      \end{itemize}
+
+    \subsection{Hypothesis}
+    Induced suspect that if the penalty value is to high, then the fitness function will be penalised to severely resulting in more `erratic' behaviour, it will be hard for the algorithm to settle down and find the global optimum. On the other hand, if it is too low, it will not penalise the function enough when it deviates from the constraints and may return optimal values which are incorrect. 
+
+    \subsection{Results}
+    As you can see from Table~\ref{table:penalty_results}, having the penalty parameter equal 1.0 in Test 3, is too big, resulting in a non-optimal solution by quite a bit although, from the standard deviation we can see that it is more stable (consistence/precise) than the other tests.
+      % Table~\ref{table:penalty_results} shows the results. 
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            Test 1 & 0.100699 & $3.5\times10^{-13}$ \\
+            \hline
+            Test 2 & 0.100699 & $3.5\times10^{-11}$ \\
+            \hline
+            Test 3 & 0.100669 & $2.7\times10^{-15}$ \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:penalty_value}.}
+          \label{table:penalty_results}
+        \end{table}
+
+      The question now is whether it is better to have a penalty parameter of 0.1 or 0.001. Test 1 vs Test 2: they have the same mean but Test 1 has a smaller standard deviation. This means that both Test 1 and Test 2 provide in average the same result, but Test 1 is more consistent.
+
+    \subsection{Conclusion}
+      For the reasons presented in the results, having the penalty parameter at 1.0 is too big, having it at 0.01 is too small and thus the penalty parameter will be held at 0.1. This should ensure consistent and reliable optimal solution to our portfolio optimisation problem.
+  % section penalty_value (end)  
+
+  \section{Parameter Investigation} % (fold)
+  \label{sec:relationships}
+  This test might seem a little peculiar at first but be assured, there is method in my madness. I want to see what the relationship is (if any) between the time it takes to run, the number of particles, number of iterations and number of assets.
+
+    \subsection{Testing Strategy} % (fold)
+    \label{sub:testing_strategy}
+      I will run nine tests and record the time it takes to finish and the results just to make sure they are consistent. Each of the nine tests will be run 20 times with a mean and standard deviation calculated and shown in the following sections. The nine tests will be as follows:
+        \begin{itemize}
+          \item Test 1: PSO 20 particles, 250 iterations, 5 assets
+          \item Test 2: PSO 20 particles, 500 iterations, 5 assets
+          \item Test 3: PSO 40 particles, 250 iterations, 5 assets
+          \item Test 4: PSO 20 particles, 250 iterations, 7 assets
+          \item Test 5: PSO 20 particles, 500 iterations, 7 assets
+          \item Test 6: PSO 40 particles, 250 iterations, 7 assets
+          \item Test 7: PSO 20 particles, 250 iterations, 10 assets
+          \item Test 8: PSO 20 particles, 500 iterations, 10 assets
+          \item Test 9: PSO 40 particles, 250 iterations, 10 assets
+        \end{itemize}
+    % subsection testing_strategy (end)
+
+    \subsection{Hypothesis} % (fold)
+    \label{sub:hypothesis}
+    There is no hypothesis here, I hope that there is no exponential relationship between increase in assets to increase in time for PSO to finish. The point of this exercise is to see if anything interesting happens. 
+    % subsection hypothesis (end)
+
+    \subsection{Results} % (fold)
+    \label{sub:results}
+      Table~\ref{table:sum_weight_results} show that even after 250 iterations, the algorithm already meets the constraints which where applied though a penalty function. This is indeed a promising result.
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            Test 1 & 1 & 0 \\
+            \hline
+            Test 2 & 1 & 0 \\
+            \hline
+            Test 3 & 1 & 0 \\
+            \hline
+            Test 4 & 1 & 0 \\
+            \hline
+            Test 5 & 1 & 0 \\
+            \hline
+            Test 6 & 1 & 0 \\
+            \hline
+            Test 7 & 1 & 0 \\
+            \hline
+            Test 8 & 1 & 0 \\
+            \hline
+            Test 9 & 1 & 0 \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:relationships}, sum of weight.}
+          \label{table:sum_weight_results}
+        \end{table}
+      Table~\ref{table:time_results} show even the most computationally demanding process of optimising in $10^{th}$ dimensional space takes less than a fifth of a second. This is using a standard dual-core machine. I imagine using a specialised server will make the algorithm much faster. 
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            Test 1 & 0.0463947 & 0.00487954 \\
+            \hline
+            Test 2 & 0.107632 & 0.00912289 \\
+            \hline
+            Test 3 & 0.0812466 & 0.00542592 \\
+            \hline
+            Test 4 & 0.0555938 & 0.00491575 \\
+            \hline
+            Test 5 & 0.1253 & 0.00699414 \\
+            \hline
+            Test 6 & 0.106167 & 0.00669427 \\
+            \hline
+            Test 7 & 0.089034 & 0.00856579 \\
+            \hline
+            Test 8 & 0.181696 & 0.00828043 \\
+            \hline
+            Test 9 & 0.17403 & 0.00557404 \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:relationships}, time to finish.}
+          \label{table:time_results}
+        \end{table}
+      Table~\ref{table:expect_return_results} show the expected return results for the optimal portfolio selected by the PSO algorithm.
+        \begin{table}[H]
+          \setlength{\extrarowheight}{2.0pt}
+          \begin{tabular}{|l|l|l|}
+            \hline
+            Test & Mean Result & Standard deviation \\
+            \hline
+            Test 1 & 0.0447 & $6.13954\times10^{-11}$ \\
+            \hline
+            Test 2 & 0.0447 & $1.58041\times10^{-17}$ \\
+            \hline
+            Test 3 & 0.0447 & $7.18283\times10^{-13}$ \\
+            \hline
+            Test 4 & 0.0527 & $3.3924\times10^{-10}$ \\
+            \hline
+            Test 5 & 0.0527 & $1.41115\times10^{-16}$ \\
+            \hline
+            Test 6 & 0.0527 & $6.83323\times10^{-13}$ \\
+            \hline
+            Test 7 & 0.101475 & $0.00279292$ \\
+            \hline
+            Test 8 & 0.1007 & $2.3030\times10^{-12}$ \\
+            \hline
+            Test 9 & 0.1007 & $2.56085\times10^{-11}$ \\
+            \hline
+          \end{tabular}
+          \caption{Results for \nameref{sec:relationships}, expected return.}
+          \label{table:expect_return_results}
+        \end{table}
+    % subsection results (end)
+
+    \subsection{Conclusion} % (fold)
+    \label{sub:conclusion}
+      As already mentioned, this section is intended to find anything (if any) interesting. The first thing I notice is the disproportional change in the results when increasing the number of iterations to the number of particles. By this I mean that Test 1 in Table~\ref{table:expect_return_results} has the same mean at Test 2 and Test 3, but the difference in output is not proportional to the change in input. From Test 1 to Test 2 and increase of doubling the number of iterations results in an decrease of about 50\%, whereas the difference between Text 1 and Test 3 is doubling the number of particles in a swarm which results in a decrease of around 20\%. 
+
+      This leads me to think that if one had to between a large swarm or a large number of iterations for the algorithm, a larger number of iterations will be more beneficial. 
+
+      Something which might not be completely straight forward is how increasing the number of particles increasing the time it takes for the algorithm to finish, even though it is based on the number of iterations. The reason for this is that at each iteration, the algorithm has to update every particles, meaning that if there are more particles, each iteration takes longer to complete, thus the whole algorithm takes longer to finish.
+    % subsection conclusion (end)
+  % section relationships (end)
+
+  % \section{Risk and Risk Aversion} % (fold)
+  % \label{sec:risk_and_risk_aversion}
+
+  %   \subsection{Testing Strategy}
+  %     The application will be run
+
+  %   \subsection{Hypothesis}
+
+  %   \subsection{Results}
+
+  %   \subsection{Conclusion}
+
+  %   Level of riskiness
+  % % section risk_and_risk_aversion (end)
+

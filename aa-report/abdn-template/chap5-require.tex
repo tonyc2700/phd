@@ -1,0 +1,71 @@
+\chapter{Requirements}
+This chapter describes the requirements for this project. Table~\ref{table:functionalRequirements} refers to the functional requirements from technical point of view. Section~\nameref{sec:non_functional} focuses on the non-functional requirements of the system.
+
+  \section{Functional} % (fold)
+  \label{sec:functional}
+  \begin{table}[ht]
+    \setlength{\extrarowheight}{2.0pt}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      No. & Description & Priority \\
+      \hline
+      \textbf{1} & \textbf{Optimisation of Portfolio} & \\
+      \hline 
+      \textbf{1.1} & \textbf{PSO} & \\
+      \hline 
+      1.1.1 & Initialisation of particle population & High \\
+      \hline 
+      1.1.2 & Processing swarm optimisation & High \\
+      \hline 
+      1.1.3 & Updating the local and global (at each step) particle values & High \\
+      \hline 
+      1.1.4 & Calculating an optimal solution & High \\
+      \hline 
+      1.1.5 & Presenting the results & Medium \\
+      \hline 
+      \textbf{1.2} & \textbf{Portfolio Optimisation} & \\
+      \hline 
+      1.2.1 & Minimise portfolio variance & High \\
+      \hline 
+      1.2.2 & Maximise portfolio expected return & Medium \\
+      \hline 
+      1.2.3 & Use multi-objective for optimum solution & Low \\
+      \hline 
+      1.2.4 & Refining results output & High \\
+      \hline 
+      1.2.5 & Make results for readable for user & High \\
+      \hline 
+      \textbf{2} & \textbf{User Input} & \\
+      \hline
+      2.1 & Allow the user to enter the name of the data file & High \\
+      \hline
+      2.2 & Allow the user to change the expected portfolio return & High \\
+      \hline 
+      2.3 & Allow the user to select the name for the output file & Medium \\
+      \hline 
+      2.4 & Allow the user to change the PSO particle size & Low \\
+      \hline 
+      2.5 & Allow the user to change the PSO iteration number & Medium \\
+      \hline
+      \textbf{3} &\textbf{Output format} & \\
+      \hline 
+      3.1 & Display the results during run-time & Medium \\
+      \hline 
+      3.2 & Make results more readable for output file & High \\
+      \hline
+      3.3 & Store results into a separate file & High \\
+      \hline
+    \end{tabular}
+    \caption{Functional requirements for the system.}
+    \label{table:functionalRequirements}
+  \end{table}
+  % section functional (end)
+
+  \section{Non-functional} % (fold)
+  \label{sec:non_functional}
+    As this system is an extension on a PSO module \cite{haskellPSO}, it is crucially important to devote a considerable amount of time to testing. This is to ensure that the alterations do not affect the performance of the overall efficiency of the algorithm and quality of the optimisation.  
+
+    The system's scalability is something not to be overlooked. As each asset in a portfolio represents one dimension in the fitness function (not to be confused with just another linear factor of the same coefficient in a function), optimising a function in, for example, 100 dimensions (100 assets) might be to much for the system to cope with. 
+
+    Running the PSO requires setting up various parameters and thresholds for optimisation (size of the particle population, number of iterations, inertia weights and convergence coefficients). These parameters need to be optimised for the algorithm to be computationally effective and produce accurate results. 
+  % section non_functional (end)

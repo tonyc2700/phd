@@ -1,0 +1,43 @@
+\chapter{Future Work}
+Future work is considered and outlined for both the optimisation algorithm and the portfolio function.
+  \section{PSO} % (fold)
+  \label{sec:pso}
+  This section mentions some future improvements or suggestions to improve the Particle Swarm Optimisation algorithm.
+    \subsection{Inertia weights} % (fold)
+    \label{sub:inertia_weights2}
+      Something to look into for the future, is whether changing the inertia weights will improve PSO on solving the portfolio optimisation problem. Some testing will need to be made to find the optimal inertia weights. Other things to consider is dynamic inertia weights as introduced in \cite{dynamic_inertia} or possibly decreasing inertia weight as in \cite{inertia}. It states that a weight of 1.9 encourages a better global search but a weight of 1.5 would be better for exploiting optima, having a continuously decreasing inertia weight from 1.9 to 1.5 might provide good guidelines for the PSO algorithm to find the global optima and then exploit that global optimum once the inertia weight settles. 
+    % subsection inertia_weights (end)
+    \subsection{Parallel Programming} % (fold)
+    \label{sub:parallel_programming}
+      % One of the benefits of Haskell -- Functional stuff...
+      Yet another benefit of Haskell is that through function abstraction \cite{haskellPSO} one can split the PSO algorithm into different processes. What takes the longest in PSO is updating each particles after every iteration, through parallel processes one can split the updating process into different sub-processes and computing them in parallel, improving the speed even more. Eden \cite{eden,eden2} is a parallel extension for Haskell, this would be what I would choose to implement parallel processing into the system.
+    % subsection parallel_programming (end)
+    \subsection{Self-termination} % (fold)
+    \label{sub:self_termination}
+      This might be beneficial for making the algorithm more efficient. Why should the algorithm run for $x$ amount of iterations if it will not improve the solution. There is no reason what so ever, the counter-positive though, might be crucial when calculating a portfolio's risk. There is the possibility that the share price has changes by the end of the algorithm. This also applies to the following Section~\nameref{sec:asset_s_covariance_and_real_time_processing} when discussing real time processing. I have considered this method and described how it can be done in Chapter~\ref{chap:design} Section~\ref{sec:expansion_for_portfolio_optimisation}. Please refer there for further details.
+    % subsection self_termination (end)
+  % section pso (end)
+
+  \section{Asset's covariance and Real-Time Processing} % (fold)
+  \label{sec:asset_s_covariance_and_real_time_processing}
+  This section mentions some future improvements for measuring risk and calculating an optimal portfolio.
+    \subsection{Covariance} % (fold)
+    \label{sub:covariance}
+      Asset covariance refers to a measure on how two assets' return change together. It as a number which determines that if asset $A$ changes, then asset $B$ also changes in accordance to asset $A$. This is a powerful thing, if one hold some assets in a portfolio and one knows what the relationship is between their expected return, one can maximise the portfolio return. For example, if we knew that whenever asset $A$ increases value then asset $B$ also increases value, then when we notice that one is increasing, we can start buying both as we know that they will both increase. Similarly if one starts to decrease in value, we know they both will, so we can act quickly to the dynamic market changes. 
+    % subsection covariance (end)
+    \subsection{Real-Time Processing} % (fold)
+    \label{sub:real_time_processing}
+      Real-time processing has never been so crucial to market efficiencies and competitiveness as it is today. To operate in the highly dynamic global market and to have an edge over competition, access to real-time data and intelligent processing and correlation of the data has become an absolute necessity in functions such as algorithmic management, smart order routing, pre-trade analytics and risk management. For these reasons, I think that there must be ways to include real-time processing in order to have a more efficient system which is less reliant on human slow reaction time. 
+    % subsection real_time_processing (end)
+  % section asset_s_covariance_and_real_time_processing (end)
+
+  \section{Diversification} % (fold)
+  \label{sec:diversification}
+    One of the most interesting concepts in portfolio theory I found was that of diversification \cite{diversification_2}, unfortunately I found this very late into my project and unable, due to time constraints, to include this into my application. Diversification excites me as it contradicts intuition. One would think that if one have one risky asset, adding another one would only increase the overall risk further, in fact it does the exact opposite!
+
+    The most simplistic model to represent this concept is the proverb, ``putting ones eggs in more than one basket''. Regardless on what the probability of a basket breaking is, having more baskets is more likely to preserve more eggs than less baskets with the same amount of eggs. In other words, if one basket crashes, the others still have the the other eggs which where in different baskets. 
+
+    Now something more useful and even less intuitive is that if ones invests in more than one company within the same sector, for example split all ones money equally (for simplicity in example) and invest in all the mobile phone networks there are. Now company $x$ gets into trouble for some reason which affects the stock market (fraud, IT, quality etc.) and the stock price for $x$ begins to fall, ones will find that the price of stocks for all the other companies goes up. This is due to the investors and business which was with company $x$ now deciding to opt out of that company and therefore bringing more investors and business to all the other companies in the market. 
+
+    My application has a sense of diversification due to the extra constraint which I added late in the project as a emergency diversification solution. It states that one must invest between 5\% and 35\% on each asset to force diversification. This is vaux or brute intelligence though, what could be useful if the application gives a little extra preference if it knows that some assets belong to the same sector. 
+  % section diversification (end)

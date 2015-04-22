@@ -1,0 +1,212 @@
+\begin{thebibliography}{10}
+
+\bibitem{dynamic_inertia}
+Alireza Alfi.
+\newblock Particle swarm optimization algorithm with dynamic inertia weight for
+  online parameter identification applied to lorenz chaotic system, April 2010.
+
+\bibitem{inertia}
+J.C. Bansal and Et. All.
+\newblock Inertia weight strategies in particle swarm optimization.
+
+\bibitem{crit2}
+W.~Breen.
+\newblock Specific versus general models of portfolio selection.
+\newblock In {\em Oxford Economic Papers}, volume~36, pages 361--368, 1968.
+
+\bibitem{two_sided_risk}
+Zhiping Chen and Yi~Wang.
+\newblock {Two-sided coherent risk measures and their application in realistic
+  portfolio optimization}.
+\newblock {\em Journal of Banking \& Finance}, 32(12):2667--2673, December
+  2008.
+
+\bibitem{constriction_factor}
+M.~Clerc.
+\newblock The swarm and the queen: towards a deterministic and adaptive
+  particle swarm optimization.
+\newblock In {\em Evolutionary Computation, 1999. CEC 99. Proceedings of the
+  1999 Congress on}, volume~3, pages --1957 Vol. 3, 1999.
+
+\bibitem{pso3}
+M.~Clerc and J.~Kennedy.
+\newblock The particle swarm - explosion, stability, and convergence in a
+  multidimensional complex space.
+\newblock {\em Evolutionary Computation, IEEE Transactions on}, pages 58--73,
+  Feb 2002.
+
+\bibitem{constriction_factor_4}
+M.~Clerc and J.~Kennedy.
+\newblock The particle swarm: Explosion, stability, and convergencein a
+  multi-dimensional complex space.
+\newblock 2002.
+
+\bibitem{hill2}
+Hill climbing Search.
+\newblock Selman, bart and gomes, p.c., 2004.
+
+\bibitem{constraint}
+Carlos~A.C. Coello.
+\newblock Theoretical and numerical constraint-handling techniques used with
+  evolutionary algorithms: A survey of the state of the art.
+\newblock In {\em Computer Methods in Applied Mechanics and Engineering}, pages
+  1245--1287, 2002.
+
+\bibitem{crit3}
+M.~S. Fekdstein.
+\newblock Mean-variance analysis in the theory of liquidity preference of
+  portfolio selection.
+\newblock In {\em Review of Economic Studies}, volume~36, pages 5--12, 1969.
+
+\bibitem{eden2}
+M.~Hidalgo-Herrero, Y.~Otega-Mallen, F.~Rubio, and R.~Pena.
+\newblock Analyzing the influence of mixed evaluation on the performance of
+  eden skeletons, 2002.
+
+\bibitem{pso_app2}
+Wei Hongkai, Wang Pingbo, Cai Zhiming, Chen Baozhu, and Yao Wanjun.
+\newblock Application of particle swarm optimization method in fractional
+  fourier transform.
+\newblock In {\em Image Analysis and Signal Processing (IASP), 2010
+  International Conference on}, pages 442--445, April 2010.
+
+\bibitem{hill3}
+WALKSAT Iterative Improvement Search Hill~Climbing, Simulated~Annealing and
+  Genetic Algorithms.
+\newblock Moore, andrew, 2009.
+
+\bibitem{lazy}
+L.P. Jones and J.~Hughes.
+\newblock Report on the programming language haskell 98.
+\newblock In {\em Tech. Rep.}, 1999.
+
+\bibitem{pso}
+J.~Kennedy and R.~Eberhart.
+\newblock Particle swarm optimization.
+\newblock In {\em Neural Networks, 1995. Proceedings., IEEE International
+  Conference on}, volume~4, pages 1942--1948 vol.4, Nov 1995.
+
+\bibitem{constriction_factor_2}
+Shi Lim and Mohammad Montakhab.
+\newblock A constriction factor based particle swarm optimization for economic
+  dispatch, 2009.
+
+\bibitem{eden}
+R.~Loogen, Y.~Otega-Mallen, F.~Rubio, and R.~Pena.
+\newblock Parallelism abstractions in eden, 2002.
+
+\bibitem{non-dist}
+Billio M.
+\newblock Simulation based methods for financial time series, 2002.
+
+\bibitem{marko1}
+H.~Markowitz.
+\newblock Portfolio selection.
+\newblock In {\em Journal of Finance}, volume~1, pages 77--91, March 1952.
+
+\bibitem{marko2}
+H.~Markowitz.
+\newblock Portfolio selection-efficient diversification of investments, 1959.
+
+\bibitem{random}
+S.K. Park and K.W. Miller.
+\newblock Random number generators - good ones are hard to find, October 1988.
+
+\bibitem{pso4}
+K.E. Parsopoulos and M.N. Vrahatis.
+\newblock Recent approaches to global optimization problems through particle
+  swarm optimization.
+\newblock {\em Evolutionary Computation, IEEE Transactions on}, 1:235--306,
+  2002.
+
+\bibitem{constriction_factor_3}
+M.E.H. Pedersen.
+\newblock Tuning \& simplifying heuristical optimization, 2010.
+
+\bibitem{diversification_2}
+Krassimir Petrov.
+\newblock Financial institutions, lecture 05.
+\newblock \url{http://www.youtube.com/watch?v=ntNf5qwrq2c}.
+\newblock Accessed: 21,April,2014.
+
+\bibitem{pso_app_main}
+R.~Poli.
+\newblock An analysis of publications on particle swarm optimisation
+  applications.
+\newblock In {\em Technical Report CSM-469 (Department of Computer Science,
+  University of Essex, UKI}, May 207.
+
+\bibitem{haskellPSO}
+Pablo Rabanal, Ismael Rodíguez, and Fernando Rubio.
+\newblock A functional approach to parallelize particle swarm optimization.
+\newblock
+  \url{http://antares.sip.ucm.es/prabanal/english/heuristics_library.html}.
+\newblock Accessed: February,2014.
+
+\bibitem{efficient_frontier}
+Risk Scientist.
+\newblock
+  \url{http://www.riskscientist.com/content/technologies-portfolio-optimizatio%
+n-theory.html}.
+\newblock Accessed: 4,April,2014.
+
+\bibitem{hill}
+Richard Senington and David Duke.
+\newblock Combinators for local search in haskell, 2010.
+
+\bibitem{pso_app}
+E.~Shahamatnia and M.-M. Ebadzadeh.
+\newblock Application of particle swarm optimization and snake model hybrid on
+  medical imaging.
+\newblock In {\em Computational Intelligence In Medical Imaging (CIMI), 2011
+  IEEE Third International Workshop On}, pages 1--8, April 2011.
+
+\bibitem{pso2}
+Yuhui Shi and R.~Eberhart.
+\newblock A modified particle swarm optimizer.
+\newblock In {\em Evolutionary Computation Proceedings, 1998. IEEE World
+  Congress on Computational Intelligence.}, pages 69--73, May 1998.
+
+\bibitem{sublime}
+Jon Skinner.
+\newblock \url{http://www.sublimetext.com}.
+\newblock Accessed: 17,February,2014.
+
+\bibitem{crit}
+G~Szego.
+\newblock Measure of risk.
+\newblock In {\em Journal of Operational Research}, volume 163, pages 5--19,
+  2005.
+
+\bibitem{pso_app3}
+Qingnian Wang, Kun Yan, Xiaofeng Wan, and Meiling Yuan.
+\newblock Application of particle swarm optimization in fussy neural networks.
+\newblock In {\em Information Assurance and Security, 2009. IAS '09. Fifth
+  International Conference on}, volume~1, pages 158--161, Aug 2009.
+
+\bibitem{portfolio}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/Portfolio_(finance)}.
+\newblock Accessed: 18,April,2014.
+
+\bibitem{diversification}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/Diversification_(finance)}.
+\newblock Accessed: 21,April,2014.
+
+\bibitem{list_comp}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/List_comprehension}.
+\newblock Accessed: 30,April,2014.
+
+\bibitem{pareto}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/Portfolio_(finance)}.
+\newblock Accessed: 8,April,2014.
+
+\bibitem{localmin}
+X.~Yao, Liu Y., and Lin G.
+\newblock Evolutionary programming made faster.
+\newblock In {\em Evolutionary Computation}, volume~3, pages 82--102, 1999.
+
+\end{thebibliography}
