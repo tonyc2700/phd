@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1429882023 "presentation.tex" "presentation.pdf" "presentation" 1429908101
+  "/usr/share/texlive/texmf-dist/tex/latex/base/report.cls" 1254151887 23630 e94bcdae2fe64080c9cd6c5639d834da ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1254151887 9042 248dfba326a1b8733d6bb8e0a3ac1e49 ""
+  "presentation.aux" 1429882023 8 a94a2480d3289e625eea47cd1b285758 ""
+  "presentation.tex" 1429882023 5022 78f90e65c99e6bd01087f97114ca5e53 ""
+  (generated)
+  "presentation.aux"
+  "presentation.pdf"
+  "presentation.log"
