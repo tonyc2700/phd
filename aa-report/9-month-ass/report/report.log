@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.13)  21 APR 2015 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.13)  23 APR 2015 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,34 +342,41 @@ Package pdftex.def Info: abdnshield.pdf used on input line 15.
 ] [4
 
 ]
-Chapter 1.
-[5
+(./report.toc)
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [5
 
 ]
-Chapter 2.
+Chapter 1.
 [6
 
 ]
-Chapter 3.
+Chapter 2.
 [7
 
 ]
-Chapter 4.
+Chapter 3.
 [8
 
 ]
-Chapter 5.
+Chapter 4.
 [9
 
 ]
+Chapter 5.
+[10
+
+]
 Chapter 6.
-(./report.bbl) [10
+(./report.bbl) [11
 
 ] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3990 strings out of 495028
- 56588 string characters out of 6181497
- 108572 words of memory out of 5000000
+ 3993 strings out of 495028
+ 56614 string characters out of 6181497
+ 110572 words of memory out of 5000000
  7132 multiletter control sequences out of 15000+600000
  34776 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -377,10 +384,10 @@ Here is how much of TeX's memory you used:
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on report.pdf (10 pages, 88703 bytes).
+Output written on report.pdf (11 pages, 91983 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
