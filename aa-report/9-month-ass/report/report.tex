@@ -10,7 +10,6 @@
 \school{Department of Applied Health Sciences}
 \date{2015}
 
-
 \begin{document}
 \maketitle
 \makedeclaration
@@ -30,50 +29,113 @@
 
 
 \chapter{Introduction}
+This chapter introduces the 9 month report, presents the research questions and gives a quick overview of some of the background and motivations of the PhD. 
 
-Mention I only started in Dec. 
+\section{Early Assessment} % (fold)
+\label{sec:early_assessment}
+I would like to mention that I started this PhD in mid-December but wish to take part in the 9-month assessment at the same time as everyone else. 
 
-\section{Introduction} % (fold)
-\label{sec:introduction}
+One of the main reasons for this is that I wish to go to the Summer Symposium and present my work to and with everyone else. 
 
-% section introduction (end)
+I believe that I have worked hard enough to justify an early assessment. My progress up to date has been very good and I have identified key issues, problems and possible solutions to my research questions very early one. I will talk about these in more details in this report as well as our communications with other universities whom are interested in similar research to us.
+% section early_assessment (end)
 \section{Background} % (fold)
 \label{sec:background}
+Dr Steve Turner, from the Applied Health department, is the person motivating this project. Dr Turner's background with this field is very broad and he wishes to introduce computational approaches to classical health questions. Together with Dr Lorna Aucott, they inspired the project and created interest with the FARR institute, whom fund the project and focus on health informatics research. 
+
+Dr Turner has already worked on projects which focus on the relationship between antenatal measurement and postnatal outcomes and has shown that certain types of growth inside the womb lead to an increased chance of the baby having asthma when it grows up \cite{turner1}. 
+
+Research within this field is being carried out throughout the world. Generation R projects have included asthma origins \cite{ generation-r} as well as their symptoms in early childhood \cite{ generation-r2}. Other researchers from Italy and Russia are also looking at fetal growth trajectories \cite{luccia1, luccia2, luccia3, luccia4}. 
+
+Given such research, Dr Turner would like to find any type of link between antenatal factors and postnatal diseases or disorders like ADHD, diabetes, epilepsy and adult asthma. 
 
 % section background (end)
 \section{Research Questions} % (fold)
 \label{sec:research_questions}
+The main research question that needs to be answered is this:
 
+\centerline{What is the relationship between fetal and maternal characteristics to non-communicable diseases in children and adults?}
+
+Sub questions:
+
+Are IVF babies small or do IVF mums produce small babies? IVF vs Spontaneous from same mother
+
+If they are born small, do they catch up? IVF +Stones​
+
+If they are born small, at what point do they become small? All datasets
+
+How accurate is gestational assessment? 
 % section research_questions (end)
 
 
-\chapter{Current Work}
-\section{Growth vs Asthma} % (fold)
-\label{sec:growth_vs_asthma}
-
-% section growth_vs_asthma (end)
-\section{European Thesis} % (fold)
-\label{sec:european_thesis}
-
-% section european_thesis (end)
-\section{Imputation and Clustering} % (fold)
-\label{sec:imputation_and_clustering}
-
-% section imputation_and_clustering (end)
-
 \chapter{Key Issues}
+Early in the PhD, I have collected a number of sample datasets. These datasets, I have been told, are good indicators on what to expect when receiving the actual data. By experimenting with these datasets, key issues and ideas have been encountered. 
+
 \section{Missingness} % (fold)
 \label{sec:missingness}
+One of the biggest problems encountered when looking at the sample datasets is the sheer amount of missing data. If the sample data I have truly represents the data I shall receive, missingness is a problem that has to be resolved. 
 
+One of the biggest problems missingness induces, is that of reliability or confidence in any analysis results. For example, 30\% of population would be enough to confidently state anything about the population as a result of analysis the 30\%, but what if only 15\% of that 30\% is complete? That leaves us with only 4.5\% of the population, which would not be enough to justify any statement about the population. 
+
+We can not, however, disregard the data with partial missingness. Information, important or not, can still be gathered from missing or partially missing data. 
+
+Imputation is the process of replacing missing data with some values. There exist a full range of imputation techniques from simple default value substitution (ie replacing all missing values with some values), slightly more clever ways such as mean values substitution (similar to default value substitution except here the values may change according to the dataset), to very complicated imputation which works by calculating probabilities of values according to the know ones. 
 % section missingness (end)
 \section{Clustering and Cluster Validation} % (fold)
 \label{sec:clustering_and_cluster_validation}
+Dr Wei Pang and I have been discussing ways for data analysis using clustering techniques. Clustering is a way of separating the data into sections, called clusters, these clusters will have the data points which are closest to each other. It works by separating points which are not similar to each other and thus telling us the characteristics of a dataset. 
 
+Our general idea is that similar antenatal behaviours will lead to certain outcomes. Thus by clustering the dataset, we will hope to find that some clusters have certain tenancies and other have different ones. What will we actually find? I am trying to not look for any type of results, I have a believe that statistical analysis is slightly biased by the fact that they are specifically looking for certain outcomes.
+
+By just analysing the data without looking into the relationships between trends and outcomes I hope to find interesting results, moreover, by not specifically looking for such results, I believe the results will be more reliable. 
+
+Cluster validation is used for evaluating cluster outcomes. This is useful in order to assess the validity of a clustering, it can be used to compare clustering algorithms or even different datasets against each other. 
+
+If we are going to use clustering to discover information from the data, cluster validation will be used to test the efficiency as well as the correctness of the outcomes we discover. It will also be useful when handling missing data, we will be able to used cluster validation to check the effects on running any imputation technique to datasets.  
 % section clustering_and_cluster_validation (end)
 \section{Growth Trajectories} % (fold)
 \label{sec:growth_trajectories}
 
 % section growth_trajectories (end)
+
+
+\chapter{Literature Review}
+This chapter covers some of the current work which inspires my project, some topics related to the research questions and some of the methods I believe will help solve the questions.
+\section{Growth vs Asthma} % (fold)
+\label{sec:growth_vs_asthma}
+It has been statistically proven than reduced fetal size from the first trimester is associated with increased risk for asthma and obstructed lung function in childhood \cite{ turner1}. It was proven using a longitudinal study / statistical analysis on around 1k subjects. 
+
+The methods used are simple statistical analytics, with confidence intervals to indicate how valid the tests are. 
+
+The problem with statistical models is that regardless of the confidence level, they are wrong. We just need to find one that is the least wrong. 
+% section growth_vs_asthma (end)
+\section{European Thesis} % (fold)
+\label{sec:european_thesis}
+
+% section european_thesis (end)
+\section{Imputation} % (fold)
+\label{sec:imputation}
+Imputation is the process of replacing missing fields with some values. There is a huge array of imputation techniques ranging from not very clever default value imputation, semi-clever mean value imputation or super clever imputation by equations. 
+% section imputation (end)
+\section{Clustering} % (fold)
+\label{sec:clustering}
+Cluster stuff
+% section clustering (end)
+\section{Regression Modelling} % (fold)
+\label{sec:regression_modelling}
+
+% section regression_modelling (end)
+
+
+\chapter{Transferable Skills}
+\section{Presentation Skills} % (fold)
+\label{sec:presentation_skills}
+
+% section presentation_skills (end)
+\section{Approvals and training} % (fold)
+\label{sec:approvals_and_training}
+
+% section approvals_and_training (end)
 
 
 \chapter{Progress}
@@ -104,6 +166,11 @@ Mention I only started in Dec.
 \chapter{Conclusion}
 
 
+
+
+
+\bibliographystyle{plain}
 \bibliography{mybib}
+
 
 \end{document}

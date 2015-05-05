@@ -1,19 +1,24 @@
 \contentsline {chapter}{\numberline {1}Introduction}{6}
-\contentsline {section}{\numberline {1.1}Introduction}{6}
+\contentsline {section}{\numberline {1.1}Early Assessment}{6}
 \contentsline {section}{\numberline {1.2}Background}{6}
 \contentsline {section}{\numberline {1.3}Research Questions}{6}
-\contentsline {chapter}{\numberline {2}Current Work}{7}
-\contentsline {section}{\numberline {2.1}Growth vs Asthma}{7}
-\contentsline {section}{\numberline {2.2}European Thesis}{7}
-\contentsline {section}{\numberline {2.3}Imputation and Clustering}{7}
-\contentsline {chapter}{\numberline {3}Key Issues}{8}
-\contentsline {section}{\numberline {3.1}Missingness}{8}
-\contentsline {section}{\numberline {3.2}Clustering and Cluster Validation}{8}
-\contentsline {section}{\numberline {3.3}Growth Trajectories}{8}
-\contentsline {chapter}{\numberline {4}Progress}{9}
-\contentsline {section}{\numberline {4.1}Italian Partners}{9}
-\contentsline {section}{\numberline {4.2}ACERO Symposium}{9}
-\contentsline {section}{\numberline {4.3}FARR International}{9}
-\contentsline {section}{\numberline {4.4}FARR PhD}{9}
-\contentsline {chapter}{\numberline {5}Future Plans}{10}
-\contentsline {chapter}{\numberline {6}Conclusion}{11}
+\contentsline {chapter}{\numberline {2}Key Issues}{7}
+\contentsline {section}{\numberline {2.1}Missingness}{7}
+\contentsline {section}{\numberline {2.2}Clustering and Cluster Validation}{7}
+\contentsline {section}{\numberline {2.3}Growth Trajectories}{8}
+\contentsline {chapter}{\numberline {3}Literature Review}{9}
+\contentsline {section}{\numberline {3.1}Growth vs Asthma}{9}
+\contentsline {section}{\numberline {3.2}European Thesis}{9}
+\contentsline {section}{\numberline {3.3}Imputation}{9}
+\contentsline {section}{\numberline {3.4}Clustering}{9}
+\contentsline {section}{\numberline {3.5}Regression Modelling}{9}
+\contentsline {chapter}{\numberline {4}Transferable Skills}{10}
+\contentsline {section}{\numberline {4.1}Presentation Skills}{10}
+\contentsline {section}{\numberline {4.2}Approvals and training}{10}
+\contentsline {chapter}{\numberline {5}Progress}{11}
+\contentsline {section}{\numberline {5.1}Italian Partners}{11}
+\contentsline {section}{\numberline {5.2}ACERO Symposium}{11}
+\contentsline {section}{\numberline {5.3}FARR International}{11}
+\contentsline {section}{\numberline {5.4}FARR PhD}{11}
+\contentsline {chapter}{\numberline {6}Future Plans}{12}
+\contentsline {chapter}{\numberline {7}Conclusion}{13}
