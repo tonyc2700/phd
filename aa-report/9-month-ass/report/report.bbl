@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{luccia2}
 Lucia Vaira Antonio~Malvasi Andrea~Tinelli, Mario Alessandro~Bochicchio.
@@ -11,10 +11,33 @@ Longo Antonella Malvasi Antonio Tinelli~Andrea Bochicchio~Mario, Vaira~Lucia.
 \newblock Fpgt: An online system for customized fetal and pediatric growth
   tracking, 2014.
 
-\bibitem{luccia4}
-Mario~Bochicchio Lucia~Vaira.
-\newblock Are static fetal growth charts still suitable for diagnostic
-  purposes?, 2014.
+\bibitem{clust-cclust}
+Evgenia Dimitriadou and Kurt Hornik.
+\newblock Convex clustering methods and clustering indexes, 2015.
+
+\bibitem{clust-mclust}
+Chris Fraley, Adrian~E. Raftery, and Luca Scrucca.
+\newblock Normal mixture modelling for model-based clustering, 2015.
+
+\bibitem{imp-mean}
+Andrew Gelman and Jennifer Hill.
+\newblock Data analysis using regression and multilevel/hierarchical models.
+
+\bibitem{imp-mi}
+Andrew Gelman, Jennifer Hill, and Yu-Sung Su.
+\newblock Missing data imputation and model checking, 2015.
+
+\bibitem{clust-fclust}
+Paolo Giordani and Maria Ferraro.
+\newblock Fuzzy clustering, 2015.
+
+\bibitem{imp-default}
+Trevor Hastie, Robert Tibshirani, Balasubramanian Narasinhan, and Gilbert Chu.
+\newblock impute: Imputation for microarray data, 2015.
+
+\bibitem{clust-cluster}
+Martin Maecchler and Peter Rousseeruw.
+\newblock Cluster analysis extended, 2015.
 
 \bibitem{generation-r}
 PhD thesis Dr. Agnes Sonnenschein-van~der Voort.
@@ -31,8 +54,17 @@ Steve Turner.
   years, 2011.
 
 \bibitem{luccia3}
-Lucia Vaira.
+Luccia Vaira.
 \newblock Quantitative fetal growth curves comparison: a collaborative
   approach, 2014.
+
+\bibitem{luccia4}
+Luccia Vaira and Mario Bochicchio.
+\newblock Are static fetal growth charts still suitable for diagnostic
+  purposes?, 2014.
+
+\bibitem{imp-mice}
+Stef van Buuren, Karin Groothuis-Oudshoorn, and ALexander Robitzsch.
+\newblock Multivariate imputation by chain equations, 2015.
 
 \end{thebibliography}

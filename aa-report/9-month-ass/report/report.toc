@@ -7,18 +7,18 @@
 \contentsline {section}{\numberline {2.2}Clustering and Cluster Validation}{7}
 \contentsline {section}{\numberline {2.3}Growth Trajectories}{8}
 \contentsline {chapter}{\numberline {3}Literature Review}{9}
-\contentsline {section}{\numberline {3.1}Growth vs Asthma}{9}
-\contentsline {section}{\numberline {3.2}European Thesis}{9}
-\contentsline {section}{\numberline {3.3}Imputation}{9}
-\contentsline {section}{\numberline {3.4}Clustering}{9}
-\contentsline {section}{\numberline {3.5}Regression Modelling}{9}
-\contentsline {chapter}{\numberline {4}Transferable Skills}{10}
-\contentsline {section}{\numberline {4.1}Presentation Skills}{10}
-\contentsline {section}{\numberline {4.2}Approvals and training}{10}
-\contentsline {chapter}{\numberline {5}Progress}{11}
-\contentsline {section}{\numberline {5.1}Italian Partners}{11}
-\contentsline {section}{\numberline {5.2}ACERO Symposium}{11}
-\contentsline {section}{\numberline {5.3}FARR International}{11}
-\contentsline {section}{\numberline {5.4}FARR PhD}{11}
-\contentsline {chapter}{\numberline {6}Future Plans}{12}
-\contentsline {chapter}{\numberline {7}Conclusion}{13}
+\contentsline {section}{\numberline {3.1}Imputation}{9}
+\contentsline {section}{\numberline {3.2}Clustering}{9}
+\contentsline {section}{\numberline {3.3}Growth vs Asthma}{10}
+\contentsline {section}{\numberline {3.4}European Thesis}{10}
+\contentsline {section}{\numberline {3.5}Regression Modelling}{10}
+\contentsline {chapter}{\numberline {4}Transferable Skills}{11}
+\contentsline {section}{\numberline {4.1}Presentation Skills}{11}
+\contentsline {section}{\numberline {4.2}Approvals and training}{11}
+\contentsline {chapter}{\numberline {5}Progress}{12}
+\contentsline {section}{\numberline {5.1}Italian Partners}{12}
+\contentsline {section}{\numberline {5.2}ACERO Symposium}{12}
+\contentsline {section}{\numberline {5.3}FARR International}{12}
+\contentsline {section}{\numberline {5.4}FARR PhD}{12}
+\contentsline {chapter}{\numberline {6}Future Plans}{13}
+\contentsline {chapter}{\numberline {7}Conclusion}{14}
