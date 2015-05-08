@@ -1,0 +1,27 @@
+Antenatal measurements and postnatal outcomes.
+Anthony Chapman, University of Aberdeen, r01ac14@abdn.ac.uk
+Dr Steve Turner, Dr Wei Pang
+
+Would like to mention that I only started this PhD 4 months ago. 
+
+Intro:
+Antenatal measurements, whether they be numerical (eg. size of a fetus) or categorical (eg. maternal smoking), have the potential to be used as part of a mechanism for checking any possible postnatal diseases or disorders. Everything in this world can be described mathematically and thus allow us to predict any problems, or at the very least, prepare for them. This includes the growth of human beings. 
+
+Related work:
+My primary supervisor, Dr Steve Turner, has been working on using prenatal factors to determine postnatal outcomes already. His research had lead to a discovery that states how certain types of growth of a fetus lead to a high risk of that fetus to have asthma as it grows up. Other universities and research groups around the world are also interested in such work and have found, independently similar traits. My job is to find efficient computational approaches to solve such problems in a greater scale. 
+
+Problem Statement:
+The main question we would like to answer is: What is the relationship between fetal and maternal characteristics to non-communicable diseases in children and adults? Some early hypothesis are: change of growth will lead to postnatal problems and steady growth will now. But we would also like to find the unexpected, by analysing the data from a mathematical point of view, I wish to find any strange relationships normal statisticians might miss.   
+
+Approach:
+The current approach is as follows: using multiple imputation, we will cleanse the data. After the data is ready for processing, clustering will be used to split the data into subsets with similar traits. Each subset will be statistically analysed and outcomes will be derived by their antenatal measurements. Whether it will work or not, that is what this PhD is about. 
+
+Evaluation and conclusion:
+We are in the process of showing the benefits of using multiple imputation tools when analysing real world data. 
+
+
+
+
+
+
+
