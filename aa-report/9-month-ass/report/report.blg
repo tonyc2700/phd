@@ -15,45 +15,45 @@ Too many commas in name 1 of "Bochicchio Mario, Vaira Lucia, Longo Antonella, Ma
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Bochicchio Mario, Vaira Lucia, Longo Antonella, Malvasi Antonio, Tinelli Andrea" for entry luccia1
 while executing---line 1090 of file plain.bst
-You've used 15 entries,
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            545 strings with 5731 characters,
-and the built_in function-call counts, 3452 in all, are:
-= -- 291
-> -- 184
+            599 strings with 7313 characters,
+and the built_in function-call counts, 6849 in all, are:
+= -- 604
+> -- 359
 < -- 0
-+ -- 73
-- -- 58
-* -- 151
-:= -- 574
-add.period$ -- 30
-call.type$ -- 15
-change.case$ -- 74
++ -- 148
+- -- 114
+* -- 295
+:= -- 1146
+add.period$ -- 74
+call.type$ -- 29
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 105
-empty$ -- 331
-format.name$ -- 58
-if$ -- 733
+cite$ -- 29
+duplicate$ -- 203
+empty$ -- 639
+format.name$ -- 114
+if$ -- 1459
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 29
 missing$ -- 0
-newline$ -- 63
-num.names$ -- 30
-pop$ -- 148
+newline$ -- 135
+num.names$ -- 58
+pop$ -- 280
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 115
 quote$ -- 0
-skip$ -- 126
+skip$ -- 225
 stack$ -- 0
-substring$ -- 75
-swap$ -- 15
+substring$ -- 150
+swap$ -- 29
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 116
 warning$ -- 0
-while$ -- 30
-width$ -- 17
-write$ -- 121
+while$ -- 58
+width$ -- 31
+write$ -- 265
 (There were 6 error messages)
