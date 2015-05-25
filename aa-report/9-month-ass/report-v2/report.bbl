@@ -1,0 +1,148 @@
+\begin{thebibliography}{10}
+
+\bibitem{saudi}
+Amel AlMakoshi, Awaiss Ellahi, Bala Sallout, Graham Devereux, and Steve Turner.
+\newblock Fetal growth trajectory and risk for eczema in a saudi population,
+  2015.
+
+\bibitem{luccia2}
+Lucia Vaira Antonio~Malvasi Andrea~Tinelli, Mario Alessandro~Bochicchio.
+\newblock Ultrasonographic fetal growth charts: An informatic approach by
+  quantitative analysis of the impact of ethnicity on diagnoses based on a
+  preliminary report on salentinian population, 2014.
+
+\bibitem{cluster}
+Kennedy Bailey.
+\newblock Numerical taxonomy and cluster analysis, 1994.
+
+\bibitem{lme4}
+Douglas Bates, Martin Maechler, and Ben Bolker.
+\newblock Linear mixed-effects models using eigen and s4.
+\newblock \url{http://cran.r-project.org/web/packages/lme4/}, 2015.
+\newblock Accessed: 14 May 2015.
+
+\bibitem{luccia1}
+Longo Antonella Malvasi Antonio Tinelli~Andrea Bochicchio~Mario, Vaira~Lucia.
+\newblock Fpgt: An online system for customized fetal and pediatric growth
+  tracking, 2014.
+
+\bibitem{clust-cclust}
+Evgenia Dimitriadou and Kurt Hornik.
+\newblock Convex clustering methods and clustering indexes, 2015.
+
+\bibitem{clust-mclust}
+Chris Fraley, Adrian~E. Raftery, and Luca Scrucca.
+\newblock Normal mixture modelling for model-based clustering, 2015.
+
+\bibitem{imp-mean}
+Andrew Gelman and Jennifer Hill.
+\newblock Data analysis using regression and multilevel/hierarchical models.
+
+\bibitem{imp}
+Andrew Gelman and Jennifer Hill.
+\newblock Data analysis using regression and multilevel/hierarchical models,
+  2006.
+
+\bibitem{imp-mi}
+Andrew Gelman, Jennifer Hill, and Yu-Sung Su.
+\newblock Missing data imputation and model checking, 2015.
+
+\bibitem{clust-fclust}
+Paolo Giordani and Maria Ferraro.
+\newblock Fuzzy clustering, 2015.
+
+\bibitem{imp-default}
+Trevor Hastie, Robert Tibshirani, Balasubramanian Narasinhan, and Gilbert Chu.
+\newblock impute: Imputation for microarray data, 2015.
+
+\bibitem{cluster-val}
+A.~Jain and R.~Dubes.
+\newblock Algorithms for clustering data, 1988.
+
+\bibitem{clust-cluster}
+Martin Maecchler and Peter Rousseeruw.
+\newblock Cluster analysis extended, 2015.
+
+\bibitem{lavaan}
+Yves Rosseel, Dan Oberski, and Jarrett Byrnes.
+\newblock Latent variable analysis.
+\newblock \url{http://cran.r-project.org/web/packages/lavaan/}, 2015.
+\newblock Accessed: 14 May 2015.
+
+\bibitem{acero}
+ACERO team.
+\newblock Aberdeen centre for energy regulation and obesity.
+\newblock \url{http://www.abdn.ac.uk/acero/symposia/symp15/}, 2015.
+\newblock Accessed: 13 May 2015.
+
+\bibitem{farr}
+FARR~Research Team.
+\newblock The farr institute of health informatics research.
+\newblock \url{http://farrinstandrews.org/}, 2015.
+\newblock Accessed: 13 May 2015.
+
+\bibitem{farr-phd}
+FARR~Research Team.
+\newblock The farr institute of health informatics research.
+\newblock
+  \url{http://www.farrinstitute.org/events/82/2015-06-09/the-farr-institute-phd-symposium-2015.html},
+  2015.
+\newblock Accessed: 13 May 2015.
+
+\bibitem{cran}
+R~Development~Core Team.
+\newblock The comprehensive r archive network.
+\newblock \url{http://cran.r-project.org/}, 1993.
+\newblock Accessed: 10 May 2015.
+
+\bibitem{R}
+R~Development~Core Team.
+\newblock The r project for statistical computing.
+\newblock \url{http://www.r-project.org/}, 1993.
+\newblock Accessed: 10 May 2015.
+
+\bibitem{lm}
+R~Development~Core Team.
+\newblock The r project for statistical computing.
+\newblock \url{}, 1993.
+\newblock Accessed: 14 May 2015.
+
+\bibitem{generation-r1}
+PhD thesis Dr. Agnes Sonnenschein-van~der Voort.
+\newblock Fetal and infant origins of childhood asthma, 2014.
+
+\bibitem{generation-r2}
+PhD thesis Dr. Esther Hafkamp-de Groen.
+\newblock Asthma symptoms in early childhood: a public health perspective,
+  2014.
+
+\bibitem{turner1}
+Steve Turner.
+\newblock First- and second-trimester fetal size and asthma outcomes at age 10
+  years, 2011.
+
+\bibitem{turner3}
+Steve Turner and Graham Devereux.
+\newblock Fetal ultrasound: Shedding light or casting shadows on the fetal
+  origins of airway disease, 2012.
+
+\bibitem{turner2}
+Steve Turner, Nanda Prabhu, Peter Danielian, and Geraldine McNeill.
+\newblock Perinatal programming of childhood asthma: Early fetal size, growth
+  trajectory during infancy, and childhood asthma outcomes, 2011.
+
+\bibitem{luccia3}
+Luccia Vaira.
+\newblock Quantitative fetal growth curves comparison: a collaborative
+  approach, 2014.
+
+\bibitem{luccia4}
+Luccia Vaira and Mario Bochicchio.
+\newblock Are static fetal growth charts still suitable for diagnostic
+  purposes?, 2014.
+
+\bibitem{imp-mice}
+Stef van Buuren, Karin Groothuis-Oudshoorn, and ALexander Robitzsch.
+\newblock Multivariate imputation by chain equations, 2015.
+
+\end{thebibliography}

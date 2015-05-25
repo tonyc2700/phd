@@ -1,0 +1,45 @@
+
+
+Background 	- Why it's important
+			- How it's come about, mention asthma 
+
+Key issues 	- Missingness
+			- Clustering and validation
+			- Growth Trajectories
+
+Current 	- Luccia 
+			- Asthma 
+			- Fetal growth thesis
+			- Imputation and clustering
+			- Acera, FARR conferences
+
+Plan 		- Plan... 
+			- Idea of clustering validation vs regression and artificial stuff
+
+
+
+Question:
+	Initial - What is the relationship between growth and (asthma, diabetes, epilepsy and ADHD)?
+	Follow  - IVF stuff 
+	Then    - Missingness + clustering 
+
+Hypotheses
+1. Reduced antenatal fetal size is an indicator for asthma (as evidenced by prescription of inhaled corticosteroid).
+2. Reduced antenatal fetal size and growth is an indicator for type I diabetes (as evidenced by prescription of insulin).
+3. Reduced second trimester fetal head circumference fetal size and growth between second trimester and birth is an indicator for epilepsy (as evidenced by prescription of anticonvulsants).
+4. Reduced second trimester fetal head circumference fetal size and growth between second trimester and birth is an indicator for ADHD (as evidenced by prescription of dexamphetamine).
+
+Aims 
+The  aim of this project is to link fetal size and growth to non-communicable diseases in children and young adults .  
+1. To link fetal and maternal characteristics to outcomes in the form of dispensed medications to the specified conditions 
+2. To identify the key timing of growth changes relating fetal measurements to the specified conditions.
+3. To describe the sensitivity and specificity of fetal measurements for predicting adult asthma, IDDM, epilepsy and ADHD.
+
+
+IVF questions: 
+
+How accurate is gestational assessment?  This is key to interpretation of fetal measurements.  The whole of fetal epidemiology is based on an assumption that gestational age is accurate.  As it is only 4% of babies are born on the due date with two thirds of the remainder being born after the due date.  This suggests that gestational assessment slightly over estimates the fetus’s actual age.  There are studies which have used IVF pregnancies as the “gold standard” but these are flawed for reasons that we know.  You are going to be the first person to use the correct gold standard.
+
+​Are IVF babies small or do IVF mums produce small babies? IVF vs Spontaneous from same mother
+​If they are born small, do they catch up? IVF +Stones​ ​
+If they are born small, at what point do they become small? All datasets 
