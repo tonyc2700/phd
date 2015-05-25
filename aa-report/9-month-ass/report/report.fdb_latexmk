@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex report"] 1432045421 "report.aux" "report.bbl" "report" 1432045433
-  "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "mybib.bib" 1431942423 6197 1ac4c61f9ce5ffa64eddfa4f34d6a6fd ""
-  "report.aux" 1432045433 6550 43c6a319a7d23b602fcd70946ac14538 ""
+["bibtex report"] 1432564751 "report.aux" "report.bbl" "report" 1432564752
+  "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
+  "mybib.bib" 1432564514 7214 45902e82c4a12cf39132c2a135e95bb8 ""
+  "report.aux" 1432564751 7350 4bf146c18f311611200614b329d2e633 ""
   "report.bcf" 0 -1 0 ""
   (generated)
   "report.bbl"
   "report.blg"
-["pdflatex"] 1432045432 "report.tex" "report.pdf" "report" 1432045433
+["pdflatex"] 1432564751 "report.tex" "report.pdf" "report" 1432564752
   "/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1303254447 8237 52810bdb4db2270e717422560a104aea ""
@@ -31,6 +31,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty" 1368312746 65148 c61accbd2b9a5316d9be0887ec48d722 ""
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty" 1368312746 62748 b02c0dc118f5f35146d37cec569e83b1 ""
   "/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1160175134 20521 e5d13d98d57bd53d4fed3aa61bd29c86 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty" 1254151804 14183 42a8fc761b806986eef292369afc2988 ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty" 1156702488 7882 3bd78469d444e8d494e27cfd7ca92719 ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1156702488 2266 7054435e4584a41cf53b0a7ca624d0cb ""
@@ -60,15 +61,15 @@
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "abdnshield.pdf" 1287397359 54627 f801505a8c043cb9682b07654a9036c7 ""
   "abdnthesis.cls" 1429626748 14740 7b794cfcc1eb8f874eebda875c994230 ""
-  "img/sample_data.png" 1431461823 85102 b96de96e87a1d9883df2bc0f7e3d8867 ""
-  "report.aux" 1432045433 6550 43c6a319a7d23b602fcd70946ac14538 ""
-  "report.bbl" 1432045421 4680 151a0a5e2b68d73bcc84b62b2316335b "bibtex report"
-  "report.out" 1432045433 1452 93d14108cd8c50dc013eefb55dc4dedf ""
-  "report.tex" 1432045432 23071 6060bbecd706305af042ecbf589517ae ""
-  "report.toc" 1432045433 1790 68f08c16378aa94d4008a9d04bfc37ab ""
+  "img/eqmiss.jpg" 1428942347 13163 5fcca6102a40427ac3e4abb8df883957 ""
+  "report.aux" 1432564751 7350 4bf146c18f311611200614b329d2e633 ""
+  "report.bbl" 1432564751 4926 c647f8e3288f80254187f0e1f2cc0159 "bibtex report"
+  "report.out" 1432564751 1415 5e7bbfb48a7545abedb364a6c7e6ee84 ""
+  "report.tex" 1432564751 30831 30c1f29cd64988a06bbbb622e65073dc ""
+  "report.toc" 1432564751 1759 79304d0ea9a2c7c7680083a9e71f70ef ""
   (generated)
   "report.log"
+  "report.out"
+  "report.aux"
   "report.pdf"
   "report.toc"
-  "report.aux"
-  "report.out"
