@@ -4,10 +4,10 @@
 \usepackage{hyperref}
 \usepackage{float}
 
-\graphicspath{ {./img/} }
+\graphicspath{ {img/} }
 
 \author{Anthony Sergio Chapman}
-\Supervisor{\\Dr Steve Turner \\ Dr Lorna Aucott \\  Dr Wei Pang}
+\Supervisor{\\Dr Steve Turner \\  Dr Wei Pang \\ Dr Lorna Aucott}
 \title{9-Month Assessment Report}
 \school{Department of Applied Health Sciences}
 \date{2015}
@@ -24,12 +24,12 @@ Routinely acquired data will be linked and approvals sought.  The current approa
 \end{abstract}
 
 \begin{acknowledgements}
-  Thank god for tea!
+	Many thanks to all of my supervisors for guiding me through these first steps. Thank god for tea!
 \end{acknowledgements}
 
 \tableofcontents
-%\listoftables
-%\listoffigures
+\listoftables
+\listoffigures
 
 % Background.  Here you talk about fetal origins including the hypotheses and the evidence that both birth weight and fetal measurements are associated with NCD risk.  The you talk about the problems of “fetal epidemiology”, ie missingness, comparison of different measurements for the same individual,the potential for different growth trajectories to lead to the same outcome, gestational certainty.
 % Research questions/hypothesis.
@@ -46,7 +46,7 @@ Routinely acquired data will be linked and approvals sought.  The current approa
 This chapter introduces the 9 month report, presents the research questions and gives a quick overview of some of the background and motivations for this PhD. 
 \section{Background} % (fold)
 \label{sec:background}
-Our group  have related fetal measurements to postnatal outcomes in childhood which include asthma and eczema in a local population \cite{turner1, turner2, turner3} and also from Saudi Arabia \cite{ saudi}.  Our work and a systematic review of the literature demonstrates that small absolute fetal size and either accelerating or faltering fetal growth are all associated with adverse outcomes. 
+Our group has related fetal measurements to postnatal outcomes in childhood which include asthma and eczema in a local population \cite{turner1, turner2, turner3} and also from Saudi Arabia \cite{ saudi}.  Our work and a systematic review of the literature demonstrates that small absolute fetal size and either accelerating or faltering fetal growth are all associated with adverse outcomes. 
 
 The methods previously used are statistical regressions and simple data modelling. These analyses consist of confidence intervals and other tests to indicate how valid the analysis is. Our new ideas consist of efficient computational approaches to find relationships between fetal and maternal data to non-communicable diseases (NCD) in children and adults in a greater scale as well as with greater confidence in any findings.
 
@@ -54,7 +54,7 @@ The methods previously used are statistical regressions and simple data modellin
 
 % There is a large body of evidence linking reduced birth weight and increased risk for non-communicable diseases (NCD) such as type II diabetes and asthma\cite{ turner1, turner2, turner3, generation-r1, generation-r2}, this implicates factors driving fetal growth in NCD aetiology. There is an emerging literature describing associations between fetal size and growth and NCD. The goal of this project is to find efficient computational approaches to solve such problems in a greater scale. 
 
-We are exploring the possibility for a computational approach to relate repeated measurements of fetal size during a pregnancy to post natal outcomes using routinely acquired data for the population of Grampian. If successful, our approaches have the potential to be used nation wide or even internationally. 
+More specifically, we are exploring the possibility for a computational approach to relate repeated measurements of fetal size during a pregnancy to post natal outcomes using routinely acquired data for the population of Grampian. If successful, our approaches have the potential to be used nationwide or even internationally. 
 
 Research within this field is being carried out throughout the world. Generation R projects have included asthma origins \cite{ generation-r1} as well as their symptoms in early childhood \cite{ generation-r2}. Other researchers from Italy and Russia are also looking at fetal growth trajectories in order to understand any relationship between fetal growth and NCD \cite{luccia1, luccia2, luccia3, luccia4}.
 
@@ -65,93 +65,39 @@ Issues we will need to address include missingness of data, comparison between d
 Our current research can be split into two sections which are as follows:
 \subsection{Methodological} % (fold)
 \label{sub:methodological}
-Our first question relates to the analysis of partially complete data and routinely acquired data which are inevitably incomplete, for example in the SEATON study \cite{turner4, turner5} 50\% or first trimester and 25\% of second trimester scans were missing. When there are large amounts of missing values in a dataset, can we still perform efficient data analysis, we consider this using imputation techniques. Thus, our hypothesis is: Data analysis is possible and efficient using appropriate imputation techniques on datasets with partially complete records.
+Our first question relates to the analysis of partially complete data and routinely acquired data which are inevitably incomplete, for example in the SEATON study \cite{turner4, turner5} 50\% or first trimester and 25\% of second trimester scans were missing. When there are large amounts of missing values in a dataset, can we still perform efficient data analysis, we consider this using imputation techniques. 
 
-How accurate is gestational assessment. To address this we will compare fetal size for pregnancies conceived by donor insemination (DI, where the date of conception is certain) to pregnancies conceived without assistance. Our hypothesis is that first, second and third trimester fetal size is no different for pregnancies conceived by DI and without assistance.
+How accurate is gestational assessment. To address this we will compare fetal size for pregnancies conceived by donor insemination (DI, where the date of conception is certain) to pregnancies conceived without assistance. 
 % subsection methodological (end)
 \subsection{Epidemiological} % (fold)
 \label{sub:epidemiological}
-Using cluster analysis, one can gather complex relationships between fields in datasets. In this manner we are going to find the relationships between fetal and maternal characteristics to NCD in children and adults. Thus, our question is: What are the relationships between fetal measurements (including maternal characteristics) and NCD. One early hypothesis is that steady growth will be associated with a decreased risk for postnatal NCD, another hypothesis would then be that change of growth will increase the risk for postnatal NCD. 
+Using clustering analysis, one can gather complex relationships between fields in datasets. In this manner we are going to find the relationships between fetal and maternal characteristics to NCD in children and adults. Thus, our question is: what are the relationships between fetal measurements (including maternal characteristics) and NCD. 
 % subsection epidemiological (end)
 % section research_question (end)
 % \section{Aims} % (fold)
 % \label{sec:aims}
 
 % % section aims (end)
+\section{Hypotheses} % (fold)
+\label{sec:hypothesis}
+Data analysis is possible and efficient using appropriate imputation techniques on datasets with partially complete records. The null being that it is not possible nor efficient to analyse artificially complete data.
+
+Relating to gestational assessment, out hypothesis is: First, second and third trimester fetal sizes are no different for pregnancies conceived by DI and without assistance.
+
+Another early hypothesis is that steady growth will be associated with a decreased risk from postnatal NCD, another hypothesis would then be that change of growth will increase the risk for postnatal NCD. The nulls would then be that steady and variable growths have no relationship to NCD in children and adults.
+% section hypothesis (end)
+
 
 \chapter{Methodology}
-Our group has acquired a number of sample datasets, these datasets represent the actual data we will be analysing once we are granted permission. By analysing and experimenting with these datasets we have been able to identify key issues and ideas which are critical for the success of this project.
-\section{Imputation} % (fold)
-\label{sec:imputation}
-At first glance, we noticed that the sample datasets have vast amounts of data missing. If the sample data we have truly represents the real data, missingness is an issue that will have to be resolved. 
-
-One of the biggest problems missingness induces is lack of reliability or confidence in any analytic results. For example, 30\% of population would be enough to confidently state something about the population as a result of analysing the 30\%, but what if only 15\% of that 30\% is complete? That leaves us with only 4.5\% of the population, which would not be enough to justify any statement about the population. 
-
-We can not, however, disregard the data with partial missingness. Information, important or not, can still be gathered from missing or partially missing data. 
-
-Imputation is the process of replacing missing data with some values\cite{ imp}. There exist a full range of imputation techniques from simple default value substitution (ie replacing all missing values with some values)\cite{ imp-default}, slightly more complex ways such as mean values substitution \cite{ imp-mean}(similar to default value substitution except here the values may change according to the dataset), to complicated imputation algorithms which use probabilistic equations to replace missing values depending on the know values\cite{ imp-mice, imp-mi}. 
-
-Default value imputation techniques are not appropriate as they are too biased. By choosing to replace all missing fields with one value, the data is shifted into a direction which might (with high probability) jeopardise any underlying relationships within the dataset. Similarly, mean value imputation does not consider enough of the dataset to produce reliable imputations. It only considers one field at a time and does not consider the relationship between different fields in each record. This could also negatively affect the results of any analysis carried out. 
-
-Multiple Imputation by Chained Equations (MICE) \cite{imp-mice} considers both the relationship between the fields of each record and the behaviour of all the other records in the dataset. We have chosen to use MICE to impute the data, given that all data behaves differently, a method for evaluating the efficiency of MICE on our datasets will have to be found. 
-% section imputation (end)
-\section{Clustering} % (fold)
-\label{sec:clustering}
-We have been looking at ways to incorporate clustering techniques for real world data analysis.  Clustering is a way of grouping data into different sections, called clusters, these clustering will contain data points which are most similar to each other \cite{ cluster}. The way a computer considers data points to be similar is problem dependant. By grouping the data into different clusters, we are able to analyse patterns, trends or relationships in datasets. 
-
-We hope to find that by clustering maternity data, antenatal behaviours and trends will be made clear. For example, we might find that a certain cluster who's records all have similar growth rates also have a some NCD, implying relationships. This approach eliminates any bias statistical regression modelling might induce by specifically looking for a certain relationship. Here, the algorithm looks for all relationships without focusing on any specific one. 
-
-By letting the algorithm analyse the data without focusing on specific relationships between trends and outcomes, we hope to find interesting and possibly unexpected results, moreover, by not specifically looking for such results, the results will be more reliable. 
-
-Cluster validation is used to evaluate cluster outcomes\cite{ cluster-val}. This is useful in order to assess the validity of a clustering, it can then be used to compare clustering algorithms or even different datasets against each other. 
-
-Using clustering and cluster validation techniques, we will be able to assess the efficiency and other effects imputation will cause when you create artificially complete datasets from partially missing ones. We will also be able to evaluate the efficiency as well as the correctness or confidence in any outcomes we get by clustering data. 
-
-If we are going to use clustering techniques to discover information from the data, cluster validation will be used to test the efficiency as well as the correctness of the outcomes we discover. It will also be useful when handling missing data, we will be able to used cluster validation to check the effects on running any imputation technique to datasets.
-
-R, the statistical program \cite{R}, has some very good clustering packages available \cite{ cran} for the public to use. The most widely used ones are "cluster" \cite{clust-cluster}, "cclust" \cite{ clust-cclust}, "fclust" \cite{ clust-fclust} and "mclust" \cite{ clust-mclust}. They can all perform similar clustering techniques, they differ in terms of efficiency and the type of data they can cluster efficiently. 
-
-The package "mclust" is comfortable performing model-based clustering using mixture models. This is useful when the datasets follow a multi model tier structure. Although powerful, our data is not complicated enough to justify using this package as other packages would perform the same clustering without over-complicating the process. This leads to a more efficient (in terms of speed in this case) process. 
-
-Similarly, "fclust" works well with fuzzy data were the clustering can be ambiguous. It can cluster data with levels of certainty where other clustering techniques have a binary approach, it is either in a cluster or not. Again, our data is not so complex to need such techniques. 
-
-The main choice lies between "cluster" and "cclust", "cluster" is the original package and has more online support, whereas "cclust" has a better indexing system which is better for finding the optimal number of clusters a dataset needs. 
-
-Tests and evaluations will have to be carried out to see which should be used. My prediction for the most efficient way to do this would be; use "cclust" for finding the optimal number of clusters and then, using this number, we perform a clustering using the package "cluster". It will need to be tested but by using both their strengths, I might have the best clustering available
-% section clustering (end)
-\section{Regression Modelling} % (fold)
-\label{sec:regression_modelling}
-An important aspect of this project is to choose an appropriate way to model fetal growth from the maternity data. R has many regression modelling packages, the ones considered for this project are a linear modelling package (lm \cite{lm}), a mixed effects modelling modelling package (lme4 \cite{lme4}) and a latent growth modelling package (lavaan \cite{lavaan}). 
-
-Each package treats the data slightly differently, currently we are focusing on addressing the issue of missingness and thus are using a simple linear model under the package "lm" to evaluate imputed datasets. 
-
-Mixed effects modelling techniques are not required at this stage of the project although they might be useful if we want to find complex inter-field relationships, ie relationships between fields, whilst simultaneously performing a regression model. 
-
-We also have an idea, its at early stages yet, for using latent growth modelling to create a fetal growth trajectory. Currently, the data contains only fetal size variables and maternal details, not any actual growth measurements. Thus we can not create a regression model on growth itself, we can only model size in terms of the other variables. Using latent growth modelling we can eliminate that as we can take growth to be our latent variable. 
-% section regression_modelling (end)
-\section{Growth Trajectories} % (fold)
-\label{sec:growth_trajectories}
-In order to analyse the growth characteristics and determine any relationships to diseases and disorder, a growth trajectory needs to be defined. From the sample data, we can see that the measurements consist of some size measurements (first, second and third trimester scans and weight at 5 years) and some categorical measurements (maternal data, smoking, previous asthma and economics). 
-
-% \begin{figure}[h]
-%   \centering
-%     \includegraphics[width=0.4\textwidth]{sample_data}
-%   \caption{Summary of one of the sample datasets.}
-%   \label{sample_data}
-% \end{figure}
-
-Using only the growth measurements would not be enough. As already mentioned, we also have growth characteristics such as whether the mother smoked. These categorical data have to be taken into account. 
-
-Mixed modelling is a way of statistically modelling data with mixed (numerical and categorical) data. It will be able to take into account categorical data and use it to change any growth trajectory to make it more realistic. This is no to be confused with mixed effects modelling which uses fixed and random effect equations for statistical modelling. 
-% section growth_trajectories (end)
+Our group has acquired a number of sample datasets and these datasets represent the actual data we will be analysing once we are granted permission to access the real data. By analysing and experimenting with these sample datasets we have been able to identify key issues and ideas which are critical for the success of this project.
 \section{Databases} % (fold)
 \label{sec:databases}
-A summary of the dataset can been seen in Figure~\ref{abdn-summary}, here, N stands of number of observations (there are 2000 records in the dataset), the rest of the columns are self-explanatory. Notice that categorical values such as matsm and Quintile\_SIMD\_2006 are represented my numerical values which can be analysed using numeical methods. For example we can see that the mean for matsm is 0.297, meaning that most mothers do not smoke. The first five records are shown in Figure~\ref{abdn-example}
+A summary of the dataset can been seen in Table~\ref{abdn-summary}, here, N stands of number of observations (there are 2000 records in the dataset), the rest of the columns are self-explanatory. Notice that categorical values such as matsm and Quintile\_SIMD\_2006 are represented by numerical values which can be analysed using numerical methods. For example we can see that the mean for matsm is 0.297, meaning that most mothers do not smoke. The first five records are shown in Table~\ref{abdn-example}
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Fri, May 22, 2015 - 15:43:37
 \begin{table}[H] \centering 
-  \caption{Summary of the sample data} 
+  \caption{Summary of the sample data. N stands for number of values recorded, they are out of a possible 2000. This table demonstrates the amount of missingness in the dataset and a summary on how the fields behave.} 
   \label{abdn-summary} 
 \begin{tabular}{@{\extracolsep{5pt}}lccccc} 
 \\[-1.8ex]\hline 
@@ -229,6 +175,69 @@ The sample dataset consists of the following fields:
 \end{tabular} 
 \end{table} 
 % section databases (end)
+\section{Imputation} % (fold)
+\label{sec:imputation}
+At first glance, we noticed that the sample datasets have vast amounts of data missing. If the sample data we have truly represent the real data, missingness is an issue that needs to be resolved. 
+
+One of the biggest problems missingness induces is lack of reliability or confidence in any analytical results. For example, 30\% of population would be enough to confidently state something about the population as a result of analysing the 30\%, but if only 15\% of that 30\% is complete, that would leave us with only 4.5\% of the population, which would not be enough to justify any statement about the population. 
+
+We cannot, however, disregard the data with partial missingness. Information, important or not, may still be extracted from missing or partially missing data. 
+
+Simply speaking, imputation is the process of replacing missing data with some values\cite{ imp}. There exist a full range of imputation techniques from simple default value substitution (i.e. replacing all missing values with some default value)\cite{ imp-default}, slightly more complex ways such as mean values substitution \cite{ imp-mean}(similar to default value substitution except that the values may change according to the dataset), to complicated imputation algorithms which use probabilistic models to replace missing values depending on the known values\cite{ imp-mice, imp-mi}. 
+
+Default value imputation techniques may not be appropriate as they are too biased in many situations. By choosing to replace all missing fields with one value, the data are shifted into a direction which might (with high probability) jeopardise any underlying relationships within the dataset. Similarly, mean value imputation (replacing all missing values with the mean of the known values) does not consider enough of the dataset to produce reliable imputations. It only considers one field at a time and does not consider the relationship between different fields in each record. This could also negatively affect the results of any analysis carried out. 
+
+Multiple Imputation by Chained Equations (MICE) \cite{imp-mice} considers both the relationship between the fields of each record and the behaviour of all the other records in the dataset. We have chosen to use MICE to impute the data because of its ability to cross reference not only different fields to each other but also the records, this means that it takes into account the correlation between different fields. Given that all data behaves differently, a method for evaluating the efficiency of MICE on our datasets will have to be found. 
+% section imputation (end)
+\section{Clustering} % (fold)
+\label{sec:clustering}
+We have been looking at ways to incorporate clustering techniques for real world data analysis.  Clustering is a way of grouping data into different sections, called clusters, so that these clusters will contain data points which are most similar to each other \cite{ cluster}. The way a computer considers data points to be similar is problem dependant. By grouping the data into different clusters, we are able to analyse patterns, trends or relationships in datasets. 
+
+We hope to find that by clustering maternity data, antenatal behaviours and trends will be made clear. For example, we might find that a certain cluster whose records all have similar growth rates also have a some NCD, implying relationships. This approach eliminates any bias that statistical regression modelling might induce by specifically looking for a certain relationship. Here, the algorithm looks for all relationships without focusing on any specific one. 
+
+By letting the algorithm analyse the data without focusing on specific relationships between trends and outcomes, we hope to find interesting and possibly unexpected results. Moreover, by not specifically looking for such results, the results will be more reliable. 
+
+Cluster validation is used to evaluate cluster outcomes\cite{ cluster-val}. This is useful in order to assess the validity and quality of a clustering and it can then be used to compare clustering algorithms or even different datasets against each other. 
+
+Using clustering and cluster validation techniques, we will be able to assess the efficiency and other effects imputation will cause when create artificially complete datasets are created from partially missing ones. We will also be able to evaluate the efficiency as well as the correctness or confidence in any outcomes we get by clustering data. 
+
+If we are going to use clustering techniques to discover information from the data, cluster validation will be used to test the efficiency as well as the correctness of the outcomes we discover. It will also be useful when handling missing data, we will be able to used cluster validation to check the effects on running any imputation technique to datasets.
+
+R, the statistical program \cite{R}, has some very good clustering packages available \cite{ cran} for the public to use. The most widely used ones are "cluster" \cite{clust-cluster}, "cclust" \cite{ clust-cclust}, "fclust" \cite{ clust-fclust} and "mclust" \cite{ clust-mclust}. They can all perform similar clustering techniques, but they differ in terms of efficiency and the type of data they can cluster efficiently. 
+
+The package "mclust" is comfortable performing model-based clustering using mixture models. This is useful when the datasets follow a multi model tier structure. Although powerful, our data is not complicated enough to justify using this package as other packages would perform the same clustering without over-complicating the process. This leads to a more efficient (in terms of speed in this case) process. 
+
+Similarly, "fclust" works well with fuzzy data were the clustering can be ambiguous. It can cluster data with levels of certainty where other clustering techniques have a binary approach, it is either in a cluster or not. Again, our data is not so complex to need such techniques. 
+
+The main choice lies between "cluster" and "cclust", "cluster" is the original package and has more online support, whereas "cclust" has a better indexing system which is better for finding the optimal number of clusters a dataset needs. 
+
+Tests and evaluations will have to be carried out to see which should be used. My prediction for the most efficient way to do this would be; use "cclust" for finding the optimal number of clusters and then, using this number, we perform a clustering using the package "cluster". It will need to be tested but by using both their strengths we might have the best clustering available.
+% section clustering (end)
+\section{Regression Modelling} % (fold)
+\label{sec:regression_modelling}
+An important aspect of this project is to choose an appropriate way to model fetal growth from the maternity data. R has many regression modelling packages, the ones considered for this project are a linear modelling package (lm \cite{lm}), a mixed effects modelling modelling package (lme4 \cite{lme4}) and a latent growth modelling package (lavaan \cite{lavaan}). 
+
+Each package treats the data slightly differently and currently we are focusing on addressing the issue of missingness and thus are using a simple linear model under the package "lm" to evaluate imputed datasets. 
+
+Mixed effects modelling techniques are not required at this stage of the project although they might be useful if we want to find complex inter-field relationships, i.e. relationships between fields, whilst simultaneously performing a regression model. 
+
+We are currently working towards using latent growth modelling \cite{ lavaan} to create a fetal growth trajectory. Currently, the data contains only fetal size variables and maternal details, not any actual growth measurements. Thus we cannot create a regression model on growth itself, we can only model size in terms of the other variables. Using latent growth modelling we can eliminate that as we can take growth to be our latent variable. 
+% section regression_modelling (end)
+\section{Growth Trajectories} % (fold)
+\label{sec:growth_trajectories}
+In order to analyse the growth characteristics and determine any relationships to diseases and disorder, a growth trajectory needs to be defined. From the sample data, we can see that the measurements consist of some size measurements (first, second and third trimester scans and weight at 5 years) and some categorical measurements (maternal data, smoking, previous asthma and economics). 
+
+% \begin{figure}[h]
+%   \centering
+%     \includegraphics[width=0.4\textwidth]{sample_data}
+%   \caption{Summary of one of the sample datasets.}
+%   \label{sample_data}
+% \end{figure}
+
+Using only the growth measurements would not be enough. As already mentioned, we also have growth characteristics such as whether the mother smoked. These categorical data have to be taken into account. 
+
+Mixed modelling is a way of statistically modelling data with mixed (numerical and categorical) data. It will be able to take into account categorical data and use it to change any growth trajectory to make it more realistic. This is no to be confused with mixed effects modelling which uses fixed and random effect equations for statistical modelling. 
+% section growth_trajectories (end)
 
 \chapter{Training and Approvals}
 \section{Presentation Skills} % (fold)
@@ -243,7 +252,7 @@ Coursera \cite{coursera}, an education platform that partners with top universit
 \label{sec:good_clinical_practise}
 Approvals for gaining access to the routinely acquired maternity data for analysis have been submitted. Coursed required to acquire the data have been identified and have been taken (GCP) or registration has been completed and we are waiting to do the courses (information governance online course).
 % section good_clinical_practise (end)
-\section{PAC Application} % (fold)
+\section{Regulatory Approvals} % (fold)
 \label{sec:pac_application}
 We are in the process of submitting an application to the Privacy Advisory Committee (PAC) \cite{pac}. This application needs to be approved in order to gain access to NHS Scottish  maternity data. 
 % section pac_application (end)
@@ -263,9 +272,9 @@ At first glance, we noticed that that the sample dataset had a large proportion 
   \label{missing-data}
 \end{figure}
 
-In order to test whether imputation creates a realistic artificially complete dataset, we will compare the results after fitting regressions models to several chosen datasets. Firstly we will start with a complete dataset, using the information from Figure~\ref{missing-data}, we will create several new datasets by copying the complete dataset and induce missingness into it sever times. Once we have several artificially incomplete datasets, we will apply the MICE algorithm to create several artificially complete datasets. Finally, we will apply the same regression model on each dataset in order to compare the results. The idea being that if imputation works, the resulting models will be the same. 
+In order to test whether imputation creates a realistic artificially complete dataset, we will compare the results after fitting regressions models to several chosen datasets. Firstly we will start with a complete dataset, using the information from Figure~\ref{missing-data}, we will create several new datasets by copying the complete dataset and induce missingness into it several times. Once we have several artificially incomplete datasets, we will apply the MICE algorithm to create several artificially complete datasets. Finally, we will apply the same regression model on each dataset in order to compare the results. The idea being that if imputation works, the resulting models will be the same. 
 
- From Table~\ref{abdn-models}, column (1) represents the complete dataset and columns (2) and (3) represent two artificially complete datasets. The values in the columns are the regression coefficients for each values in the first column. Essentially we are regressing Z\_BWT\_ICH in terms of the other values. In the table you can see that that they values are very close to each other. This is enough to indicate that imputation works on this dataset.
+ In Table~\ref{abdn-models}, column (1) represents the complete dataset and columns (2) and (3) represent two artificially complete datasets. The values in the columns are the regression coefficients for each values in the first column. Essentially we are regressing Z\_BWT\_ICH in terms of the other values. In the table one can see that that the values are very close to each other. This is enough to indicate that imputation works on this dataset.
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Fri, May 22, 2015 - 15:54:33
@@ -317,7 +326,7 @@ F Statistic (df = 6; 327) & 5.482$^{***}$ & 5.399$^{***}$ & 6.942$^{***}$ \\
 % section missingness (end)
 \section{ACERO} % (fold)
 \label{sec:acero}
-The Aberdeen Centre for Energy Regulation and Obesity (ACERO) held their annual symposium at the Rowett Institute of Nutrition and Health in Aberdeen\cite{ acero}. I gave a short presentation on how to evaluate artificially completing datasets. 
+The Aberdeen Centre for Energy Regulation and Obesity (ACERO) held their annual symposium at the Rowett Institute of Nutrition and Health in Aberdeen\cite{ acero}. I gave an oral presentation on how to evaluate artificially completing datasets. 
 
 It was a great experience, nerve-racking but good practise for future presentations. The questions at the end raised good points and it gave me a chase to experience public speaking. The courses taken on presentation skills earlier in the year certainly came to good use. 
 
@@ -341,7 +350,6 @@ After brief talks on our relevant fields of research, we discussed the possibili
 % section italian_partners (end)
 
 \chapter{Future Plans}
-I will do stuffs.
 \section{The next steps:} % (fold)
 \label{sec:immediate_things_to_do_}
 % section immediate_things_to_do_ (end)Immediate things to do:
@@ -351,7 +359,7 @@ I will do stuffs.
 	\item Finish joint paper with Lucia and find appropriate place to publish \\ - I have to carry on working with Lucia Vaira, an Italian PhD student currently working on way to model fetal growth. I will need to finish several case studies testing the efficiency of the proposed fetal growth regression model. Once the paper is complete (or whilst we are completing it) we will need to find a suitable conference, journal or symposium to publish and/or present the paper. We will then need to arrange funding, travel and accommodation for trip.
 	\item FARR Institute International Conference 2015 academic poster \\ - On the 27th August 2015, I will be attending the annual FARR International Conference where I may be asked to create an academic poster to present or an oral presentation to give at the conference. Either will be based on our efforts to create artificially complete data and some results showing that the new data is a good representation of the truth.
 	\item Analyse IVF data after approvals are granted \\ - Soon, I will be grated permission to access and analyse IVF maternity data. I will test the imputation, regression and clustering theories we have been studying on these data. We will be able to fine tune any necessary ideas from the results when testing on IVF data. Any results we find will also be important to the assisted reproduction community. 	
-	\item Take information governance course with Steve \\ - In order to get access to Aberdeen's neonatal records, we will need to complete and information governance online course. Without this, we do not have permission to access or perform any analysis on the data.  
+	\item Take information governance course \\ - In order to get access to Aberdeen's neonatal records, we will need to complete and information governance online course. Without this, we do not have permission to access or perform any analysis on the data.  
 \end{itemize}
 % \chapter{Conclusion}
 

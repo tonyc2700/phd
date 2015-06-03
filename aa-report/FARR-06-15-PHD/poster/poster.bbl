@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{turner1}
+S.~Turner, ``First- and second-trimester fetal size and asthma outcomes at age
+  10 years,'' 2011.
+
+\bibitem{turner2}
+S.~Turner, N.~Prabhu, P.~Danielian, and G.~McNeill, ``Perinatal programming of
+  childhood asthma: Early fetal size, growth trajectory during infancy, and
+  childhood asthma outcomes,'' 2011.
+
+\bibitem{turner3}
+S.~Turner and G.~Devereux, ``Fetal ultrasound: Shedding light or casting
+  shadows on the fetal origins of airway disease,'' 2012.
+
+\bibitem{saudi}
+A.~AlMakoshi, A.~Ellahi, B.~Sallout, G.~Devereux, and S.~Turner, ``Fetal growth
+  trajectory and risk for eczema in a saudi population,'' 2015.
+
+\bibitem{imp}
+A.~Gelman and J.~Hill, ``Data analysis using regression and
+  multilevel/hierarchical models,'' 2006.
+
+\bibitem{imp-mice}
+S.~van Buuren, K.~Groothuis, and A.~Robitzsch, ``Multivariate imputation by
+  chain equations,'' 2015.
+
+\bibitem{R}
+R.~D.~C. Team, ``The r project for statistical computing.''
+  \url{http://www.r-project.org/}, 1993.
+\newblock Accessed: 10 May 2015.
+
+\end{thebibliography}
