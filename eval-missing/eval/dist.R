@@ -1,3 +1,6 @@
+# Analyse the missingness distribution of
+# a given dataset
+
 library(foreign)
 
 toCSV <- function(db, rmFst = FALSE){

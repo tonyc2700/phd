@@ -16,7 +16,7 @@ completeData <- function(db){
 }
 
 # Given a dataset with missingness, extract
-# the complete records from thed ataset
+# the complete records from the dataset
 # and make it mimic the missingness of the
 # larger set.
 artMiss <- function(db){

@@ -22,7 +22,6 @@ write.csv(dataset, file="test.csv")
 
 ## Delete a complete column called "col" of table called "ds" 
 ds$col <- NULL 
-
 ## Delete rows with only NA values
 test[apply(test,1,function(x)any(!is.na(x))),]
 
@@ -35,6 +34,9 @@ ncol() and nrow()
 ## Turn type or col in ds to factor
 ds$col <- as.factor(ds$col)
 
+## Lists stuff
+list[[x]] returns the element x from a list
+list[x] returns a list with the element x inside it 
 
 ---- MICE stuff -----------
 # MICE function
