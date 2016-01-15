@@ -1,0 +1,69 @@
+\documentclass{article} 
+
+\title{No solution? Evaluating Multiple Imputation} 
+\author{Anthony S. Chapman} 
+\begin{document} 
+	\maketitle{} 
+	\section{Introduction} % (fold)
+	\label{sec:introduction}
+	Data collection has been increasing 
+	Missing data is inevitable (human and computing reasons, i.e. people not putting it in or computer corrupting it, )
+	Non-computing people either imputate willy-neely or ignore missing data - need to use as much data as you can. (Ask Graham about theory about using as much data as possible for better analysis)
+	Many imputation algorithms out there with many parameters, which is best? 
+	Need 
+	% section introduction (end)
+
+	\section{Background} % (fold)
+	\label{sec:background}
+		\subsection{Incompleteness Issue} % (fold)
+		\label{sub:incompleteness_issue}
+		Huge amout of missing data, too many people not using everything they can (i.e. ignoring data with missingness)
+
+		Cite medical papers that only use a small part of the data they have due to missingness
+		% subsection incompleteness_issue (end)
+		\subsection{Will it work on my data?} % (fold)
+		\label{sub:will_it_work_on_my_data_}
+		Even if imputation (like MICE) works on someone's data, will it work with mine? Different types and levels of missing data. Need a bench-mark but other datasets no matter how close to yours are still not yours. 
+
+		Cite a couple of paper that evaluate imputation on their dataset but do not generalise on any dataset
+		% subsection will_it_work_on_my_data_ (end)
+		\subsection{Which imputation is best for me} % (fold)
+		\label{sub:which_imputation_is_best_for_me}
+		There is nothing to easily compare different imputation techniques, post researches haven't got computing background... (need a way to formally say that statement, maybe number of disciplines VS computing?? ) 
+
+		You can't compare an evaluation of one imputation on data A and a different imputation on data B, is chocolate better than bacon? 
+		% subsection which_imputation_is_best_for_me (end)
+	% section background (end)
+
+	\section{Possible Solutions} % (fold)
+	\label{sec:a_solution}
+		\subsection{Incompleteness} % (fold)
+		\label{sub:incompleteness}
+		Imputations solves incompleteness, you just have to be careful how you use it. 
+
+		Can't blindly impute something as it might result in bias and unreliable results. 
+		% subsection incompleteness (end)
+		\subsection{Testing your own data} % (fold)
+		\label{sub:testing_your_own_data}
+		Use your own level or missingness as a benchmark and create mini-me's as bench-mark. You are the closest thing to yourself. 
+		Group theory stuff, multidimensional-mixed data distance measurements, Gower, medoids, widths and dissimilarities.
+
+		Just because it worked on someone else, doesn't mean it works for you, cite papers who test specific datasets. 
+		% subsection testing_your_own_data (end)
+		\subsection{Comparing Imputations} % (fold)
+		\label{sub:comparing_imputations}
+		Will now be able to compare different imputations on your own dataset with ``normalised '' results for comparison. 
+		% subsection comparing_imputations (end)
+	% section a_solution (end)
+
+	\section{Conclusion} % (fold)
+	\label{sec:conclusion}
+	It's better to use all the data you can but can't blindly imputation. This framework indicates whether your data 
+	% section conclusion (end)
+
+	\section{Discussion} % (fold)
+	\label{sec:discussion}
+	Working on implementing this, ClEMI, any researcher regardless the computing ability will be able to use it. 
+	% section discussion (end)
+
+\end{document}
