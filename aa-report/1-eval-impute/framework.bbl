@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{epi1}
+Amy~M. Branum, Jennifer~D. Parker, Keim~Sarah A., and Schempf~Ashley H.
+\newblock Prepregnancy body mass index and gestational weight gain in relation
+  to child body mass index among siblings.
+\newblock {\em American Journal of Epidemiology}, 174(10):1159--1165, 2011.
+
+\bibitem{missing3}
+ALAN~C. COCK.
+\newblock Working with missing values.
+\newblock {\em Journal of Marriage and Family}, 174(67):1012–1028, 2005.
+
+\bibitem{missing1}
+Therese~D. Pigott.
+\newblock A review of methods for missing data.
+\newblock {\em Educational Research and Evaluation}, 7(4):. 353--383, 2001.
+
+\bibitem{missing2}
+Donald~B. Rubin.
+\newblock An overview of multiple imputation.
+
+\bibitem{bigData}
+ScienceDaily.
+\newblock Big data, for better or worse.
+\newblock 2013 (accessed: January 18, 2016).
+\newblock \url{http://www.sciencedaily.com/releases/2013/05/130522085217.htm}.
+
+\bibitem{compare}
+Anoop~D. Shah and Jonathan~W. Bartlett.
+\newblock Comparison of parametric and random forest mice in imputation of
+  missing data in survival analysis.
+\newblock 2014.
+
+\end{thebibliography}

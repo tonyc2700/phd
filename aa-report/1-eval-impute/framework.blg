@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: framework.aux
+The style file: plain.bst
+Database file #1: papers.bib
+Warning--I didn't find a database entry for "ep2"
+Warning--I didn't find a database entry for "ep3"
+Warning--I didn't find a database entry for "ep4"
+Warning--I didn't find a database entry for "ep5"
+Warning--I didn't find a database entry for "mice"
+Warning--I didn't find a database entry for "r"
+Warning--I didn't find a database entry for "spss"
+Warning--empty journal in missing2
+Warning--empty year in missing2
+Warning--empty journal in bigData
+Warning--empty journal in compare
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            539 strings with 4824 characters,
+and the built_in function-call counts, 1700 in all, are:
+= -- 161
+> -- 64
+< -- 0
++ -- 27
+- -- 20
+* -- 117
+:= -- 299
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 28
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 63
+empty$ -- 141
+format.name$ -- 20
+if$ -- 342
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 33
+num.names$ -- 12
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 118
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 4
+while$ -- 15
+width$ -- 7
+write$ -- 62
+(There were 11 warnings)

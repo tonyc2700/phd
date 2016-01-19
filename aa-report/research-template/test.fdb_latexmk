@@ -1,5 +1,5 @@
 # Fdb version 3
-["bibtex test"] 1452849889 "test.aux" "test.bbl" "test" 1452849889
+["bibtex test"] 1453204586 "test.aux" "test.bbl" "test" 1453204586
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
   "latex-sample.bib" 0 -1 0 ""
   "test.aux" 1452849889 1680 ee7422ee1401beb7327ed86e51fd5baa ""
@@ -7,7 +7,7 @@
   (generated)
   "test.blg"
   "test.bbl"
-["pdflatex"] 1452849889 "test.tex" "test.pdf" "test" 1452849889
+["pdflatex"] 1452849889 "test.tex" "test.pdf" "test" 1453204586
   "/etc/texmf/web2c/texmf.cnf" 1452796654 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -83,9 +83,9 @@
   "test.tex" 1452849889 8107 e5065d813c9d1af90afc7b6778d639c4 ""
   "test.toc" 1452849889 613 2a7461e69f780a17a93c698ef3738318 ""
   (generated)
+  "test.pdf"
+  "test.lot"
   "test.toc"
   "test.aux"
-  "test.lot"
-  "test.log"
   "test.lof"
-  "test.pdf"
+  "test.log"
