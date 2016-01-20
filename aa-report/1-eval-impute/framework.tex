@@ -13,6 +13,9 @@
 % Also, you want to head a section as The Problem to make it abundantly clear what it is. You need to lead them by the nose. You must always explain what you are going to tell them, tell them what you are going to tell them, then tell them what you have told them to get the message across -subtly, of course. Expand Acronyms the first time you use them. Also, explain everything if you want the paper to appeal to a wider audience. If you write for an audience who understand all the language, great for them, but if you want to refer to it later for a different audience, better to make it super clear and lead them by the hand.
 
 % Anyway - you are off and running. Good luck - you'll have three papers in no time at all.
+
+% There is nothing to easily compare different imputation techniques, post researches haven't got computing background... (need a way to formally say that statement, maybe number of disciplines VS computing?? ) 
+
 	\abstract{Blah}
 
 	\section{Introduction} % (fold)
@@ -38,19 +41,17 @@
 		% subsection incompleteness (end)
 		\subsection{Will it work on my data?} % (fold)
 		\label{sub:will_it_work_on_my_data_}
-		This next problems arises when a researchers does decide to use the data with missing values but does not have sufficient knowledge to apply the available methods, like Muliple Imputation by Chained Equations (MICE \cite{mice}) using the computational language R \cite{r} or the Impute Missing Values function in the statistical software SPSS \cite{spss}. The problem is, how do you know if the imputed values are representative to the truth, how do you know whether record 2,754 column 5 is male or not after you apply the imputation method.
+			This next problem arises when a researchers does decide to use the data with missing values but does not have sufficient knowledge to apply the available methods, like Muliple Imputation by Chained Equations (MICE \cite{mice}) using the computational language R \cite{r} or the Impute Missing Values function in the statistical software SPSS \cite{spss}. The problem is, how do you know if the imputed values are representative to the truth, how do you know whether record 2,754 column 5 is male or not after you apply the imputation method.
 
-		Even if the imputation method has been proven to work on someone else's dataset such as \cite{compare}, this no indication it will work for yours, unless you have the exact dataset as them, which is unrealistic. This is due to the many reasons and ways that missing data is creates, for example there might be a relationship between one missing value and another one. 
+			Even if the imputation method has been proven to work on someone else's dataset such as \cite{compare}, this no indication it will work for yours, unless you have the exact dataset as them, which is unrealistic. This is due to the many reasons and ways that missing data is creates, for example there might be a relationship between one missing value and another one. 
 
-		In order to test whether an imputaion method works on your dataset, you need something to compare the results to, a benchmark, like this one would be able to analyse what effect of the methods. Unfortunately, it is very difficult to find a complete dataset which contains the same characteristics of your own dataset, there will always be differences. 
-
-		% Cite a couple of paper that evaluate imputation on their dataset but do not generalise on any dataset
+			In order to test whether an imputation method works on your dataset, you need something to compare the results to, a benchmark, like this one would be able to analyse what effect of the methods. Unfortunately, it is very difficult to find a complete dataset which contains the same characteristics of your own dataset, there will always be differences. 
 		% subsection will_it_work_on_my_data_ (end)
 		\subsection{Which imputation is best for me} % (fold)
 		\label{sub:which_imputation_is_best_for_me}
-		There is nothing to easily compare different imputation techniques, post researches haven't got computing background... (need a way to formally say that statement, maybe number of disciplines VS computing?? ) 
+			The following problem applies to researchers, even those computationally competent, who wish to find out whether one imputation method is better than another. There is nothing to easily compare results from different imputation methods or same imputation methods with slightly different parameters. The main problem arises when one tries to compare the outcomes from one method to another, here an adequate analogy would be that compare imputation method A to method B would be like comparing chocolate with a bicycle; the outcomes might not be comparable. 
 
-		You can't compare an evaluation of one imputation on data A and a different imputation on data B, is chocolate better than bacon? 
+			There should a way to compare different methods without having to create your own computer software in the process. Although 
 		% subsection which_imputation_is_best_for_me (end)
 	% section the_problem (end)
 

@@ -11,10 +11,22 @@ ALAN~C. COCK.
 \newblock Working with missing values.
 \newblock {\em Journal of Marriage and Family}, 174(67):1012–1028, 2005.
 
+\bibitem{spss}
+SPSS Inc.
+\newblock {\em SPSS Statistics for Windows, Version 17.0.}
+\newblock Chicago: SPSS Inc, 2008.
+\newblock \url{http://www-01.ibm.com/software/uk/analytics/spss}.
+
 \bibitem{missing1}
 Therese~D. Pigott.
 \newblock A review of methods for missing data.
 \newblock {\em Educational Research and Evaluation}, 7(4):. 353--383, 2001.
+
+\bibitem{r}
+{R Development Core Team}.
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2008.
+\newblock {ISBN} 3-900051-07-0 \url{http://www.R-project.org}.
 
 \bibitem{missing2}
 Donald~B. Rubin.
@@ -31,5 +43,11 @@ Anoop~D. Shah and Jonathan~W. Bartlett.
 \newblock Comparison of parametric and random forest mice in imputation of
   missing data in survival analysis.
 \newblock 2014.
+
+\bibitem{mice}
+Stef {van Buuren} and Karin Groothuis-Oudshoorn.
+\newblock {mice}: Multivariate imputation by chained equations in r.
+\newblock {\em Journal of Statistical Software}, 45(3):1--67, 2011.
+\newblock \url{http://www.jstatsoft.org/v45/i03/}.
 
 \end{thebibliography}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex framework"] 1453208130 "framework.aux" "framework.bbl" "framework" 1453208228
+["bibtex framework"] 1453210566 "framework.aux" "framework.bbl" "framework" 1453278734
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "framework.aux" 1453208228 1917 ed0fd42983c8af05ef568c4f6bccc911 ""
+  "framework.aux" 1453278734 1968 591203a2d68e098da9e7f48b7848b520 ""
   "framework.bcf" 0 -1 0 ""
-  "papers.bib" 1453207910 1415 a5b53521fd62ea2d75d9253dae29f782 ""
+  "papers.bib" 1453209409 2285 36845e66506960cbff978870303de972 ""
   (generated)
   "framework.blg"
   "framework.bbl"
-["pdflatex"] 1453208228 "framework.tex" "framework.pdf" "framework" 1453208228
+["pdflatex"] 1453278734 "framework.tex" "framework.pdf" "framework" 1453278734
   "/etc/texmf/web2c/texmf.cnf" 1452796654 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -56,9 +56,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1452796844 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1452796783 3822874 d5e2f78b3f7a3331c52ddae743cf621c ""
-  "framework.aux" 1453208228 1917 ed0fd42983c8af05ef568c4f6bccc911 ""
-  "framework.bbl" 1453208130 1115 97efe99cad15799c1037def21b7ea6b0 "bibtex framework"
-  "framework.tex" 1453208228 6420 05b0475295ee92536864eb2dc42da069 ""
+  "framework.aux" 1453278734 1968 591203a2d68e098da9e7f48b7848b520 ""
+  "framework.bbl" 1453210566 1803 0fce4bdcbe90618524975ae4accb35f1 "bibtex framework"
+  "framework.tex" 1453278734 6875 19cdd6272740cfa18944c6dc33db03a5 ""
   (generated)
   "framework.log"
   "framework.pdf"
