@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{epi1}
 Amy~M. Branum, Jennifer~D. Parker, Keim~Sarah A., and Schempf~Ashley H.
@@ -10,6 +10,13 @@ Amy~M. Branum, Jennifer~D. Parker, Keim~Sarah A., and Schempf~Ashley H.
 ALAN~C. COCK.
 \newblock Working with missing values.
 \newblock {\em Journal of Marriage and Family}, 174(67):1012–1028, 2005.
+
+\bibitem{careful}
+Mustansar~Ali Ghazanfar and Adam Prugel-Bennett.
+\newblock The advantage of careful imputation sources in sparse
+  data-environment of recommender systems: Generating improved svd-based
+  recommendations.
+\newblock {\em Informatica}, 37(37):61–92, (2013).
 
 \bibitem{spss}
 SPSS Inc.

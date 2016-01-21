@@ -1,6 +1,7 @@
 \documentclass{IEEEconf} 
 \usepackage{url}
-
+% \usepackage{hyperref}
+\usepackage{amssymb,amsmath}
 
 \title{No solution? Evaluating Multiple Imputation} 
 \author{Anthony S. Chapman, Dr Steven Turner, Dr. Wei Pang} 
@@ -59,22 +60,41 @@
 	\label{sec:a_solution}
 		\subsection{Incompleteness} % (fold)
 		\label{sub:incompleteness}
-		Imputations solves incompleteness, you just have to be careful how you use it. 
-
-		Can't blindly impute something as it might result in bias and unreliable results. 
+			Imputation will create values where there were non before, one has to be careful when imputing data as there are many techniques (default value, mean value and multiple imputation just to name a few) as using them without care will lead to erroneous data \cite{careful}. By creating a user-friendly program with clear guidelines on how to use it and some explanation on how it works, we believe that researchers whom would normally ignore data with missing values will be more likely to use more of their data through imputation. 
 		% subsection incompleteness (end)
 		\subsection{Testing your own data} % (fold)
 		\label{sub:testing_your_own_data}
-		Use your own level or missingness as a benchmark and create mini-me's as bench-mark. You are the closest thing to yourself. 
-		Group theory stuff, multidimensional-mixed data distance measurements, Gower, medoids, widths and dissimilarities.
+			In order to test how well an imputation technique, such as MICE, you need to be able to compare the effects of the imputation method to a benchmark, we propose creating a benchmark from the users own dataset. By analysing the missing data characteristics, extracting the subset of complete data from the dataset and then replicating the same dataset onto the subset, we are able to create artificial mini datasets which behave as the original one except now we have a benchmark to compare the effects of imputation. 
 
-		Just because it worked on someone else, doesn't mean it works for you, cite papers who test specific datasets. 
+		% Use your own level or missingness as a benchmark and create mini-me's as bench-mark. You are the closest thing to yourself. 
+		% Group theory stuff, multidimensional-mixed data distance measurements, Gower, medoids, widths and dissimilarities.
+
+		% Just because it worked on someone else, doesn't mean it works for you, cite papers who test specific datasets. 
+
 		% subsection testing_your_own_data (end)
 		\subsection{Comparing Imputations} % (fold)
 		\label{sub:comparing_imputations}
-		Will now be able to compare different imputations on your own dataset with ``normalised '' results for comparison. 
+			In order for a researcher to be able to compare different imputation techniques on their own datasets, the outcomes of the techniques need to ``talk the same language''. By having a program that takes a dataset and imputation pair and then outputs the efficiency of the imputation, one is able to compare these outputs with ease and without having to understand the individual imputation technique outputs. 
+
+			% Will now be able to compare different imputations on your own dataset with ``normalised '' results for comparison. 
 		% subsection comparing_imputations (end)
 	% section a_solution (end)
+	\section{The Framework} % (fold)
+	\label{sec:the_framework}
+		The process is as follows: Using a dataset with missing values, call this ``OD'', for original dataset, and an imputation technique, call this ``Imp'', you first analyse the missingness characteristics of ``OD'' to in order to apply them later. Then, create a new dataset by deleting any record from ``OD'', call this "CC", for complete cases. Using the missingness characteristics, we create more da
+
+		The proposed framework is as follows: In order to assess the effects of any imputation technique, the program will need a dataset with missing values, called ``D'', and an imputation method, called ``I''. Then the function ``I(x)'' is a function that takes a data with missing values and outputs an imputed dataset. 
+
+		Specify dataset (O) and imputation method (I)
+		Analyse dataset to obtain the missing characteristics
+		Create subset of dataset with only complete cases (C)
+		Apply missing characteristics to create n individual datasets out of C, called ($ArtM_{1}, ArtM_{2}...ArtM_{n}$)
+		Impute all $Art_{n}$ to created artificially complete datasets $ArtC_{n}$
+		Apply clustering algorithm to C and all $ArtC_{n}$ to create $ClustC$ and $ClustArt_{n}$
+		Average clustering outcomes from all $ClusArt_{n}$ and compare to $ClustC$
+		Analyse how far the average of all $ClusArt_{n}$ have gone from $ClustC$
+		Normalise the distance to give a percentage of goodness for the user.
+	% section the_framework (end)
 
 	\section{Conclusion} % (fold)
 	\label{sec:conclusion}
@@ -90,3 +110,7 @@
 	\bibliography{papers}
 
 \end{document}
+
+
+
+The first step will be to analyse the original dataset to find the missing value characteristics. We then great a dataset out of the original one by deleting all the records with missing values in it. The next step will be to create n amount of artificial datasets 
