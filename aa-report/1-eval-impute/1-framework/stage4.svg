@@ -1,0 +1,142 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="square" id="id28298176">
+            <rect x="833.8038277511969" y="538.3397129186606"
+                width="155.0" height="155.0" latexdraw:borderPos="outer"
+                stroke-width="2.0" stroke="black" fill="#fcfcfc"/>
+        </g>
+        <g latexdraw:type="square" id="id18056616" transform="rotate(180.0) translate(-1146.9856459330142 -738.373205741626)">
+            <rect x="497.22009569377985" y="292.91387559808567"
+                width="152.5454545454545" height="152.5454545454545"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none" rx="31.23638084458671"/>
+        </g>
+        <g latexdraw:type="text" id="id30970073" fill="black" latexdraw:position="bl">
+            <text x="518.133971291865" y="402.5933014354064">\begin{tabular}{c}
+  Artificially \\
+  Complete \\
+  Dataset n \\
+\end{tabular}</text>
+        </g>
+        <g latexdraw:type="square" id="id32909369" transform="rotate(180.0) translate(-283.8277511961707 -1062.5837320574142)">
+            <rect x="65.64114832535813" y="455.0191387559798"
+                width="152.5454545454545" height="152.5454545454545"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none" rx="31.23638084458671"/>
+        </g>
+        <g latexdraw:type="text" id="id27220576" fill="black" latexdraw:position="bl">
+            <text x="89.71291866028673" y="171.01435406698647">\begin{tabular}{c}
+  Artificially \\
+  Incomplete \\
+  Dataset n.1\\
+\end{tabular}</text>
+        </g>
+        <g latexdraw:type="square" id="id15095157" transform="rotate(180.0) translate(-284.88038277511737 -272.0574162679427)">
+            <rect x="66.16746411483143" y="59.7559808612441"
+                width="152.5454545454545" height="152.5454545454545"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none" rx="31.23638084458671"/>
+        </g>
+        <g latexdraw:type="text" id="id16766000" fill="black" latexdraw:position="bl">
+            <text x="83.92344497607633" y="575.751196172248">\begin{tabular}{c}
+  Artificially \\
+  Incomplete \\
+  Dataset n.m\\
+\end{tabular}</text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id24041505">
+            <polyline
+                points="485.40669856459243,415.74162679425723 248.56459330143434,559.952153110047 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="3.141592653589793" marker-start="url(#arrow0-24041505)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id616415">
+            <polyline
+                points="344.35406698564464,417.8468899521523 262.24880382774995,417.8468899521522 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="3.141592653589793" marker-start="url(#arrow0-616415)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1093907">
+            <polyline
+                points="329.61722488038146,396.7942583732049 243.30143540669724,395.74162679425757 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="3.141592653589793" marker-start="url(#arrow0-1093907)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id5038587">
+            <polyline
+                points="344.35406698564464,374.6889952153102 263.30143540669724,375.74162679425757 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="3.141592653589793" marker-start="url(#arrow0-5038587)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id7295415">
+            <polyline
+                points="484.3540669856451,318.8995215310993 242.24880382775018,183.1100478468884 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="3.141592653589793" marker-start="url(#arrow0-7295415)"/>
+        </g>
+        <g latexdraw:type="text" id="id21834647" fill="black" latexdraw:position="bl">
+            <text x="87.0813397129184" y="330.48803827751317">\begin{tabular}{c}
+  Artificially \\
+  Incomplete \\
+  Dataset n.1\\
+\end{tabular}</text>
+        </g>
+        <g latexdraw:type="square" id="id23660492" transform="rotate(180.0) translate(-279.6172248803807 -591.0047846889961)">
+            <rect x="63.53588516746311" y="219.2296650717708"
+                width="152.5454545454545" height="152.5454545454545"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none" rx="31.23638084458671"/>
+        </g>
+    </g>
+    <defs>
+        <marker overflow="visible" orient="auto" id="arrow0-24041505">
+            <path
+                d="M 0.0 0.0 L 4.652083333333334 1.6614583333333335 L 4.652083333333334 0.0 L 4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-616415">
+            <path
+                d="M 0.0 0.0 L 4.652083333333334 1.6614583333333335 L 4.652083333333334 0.0 L 4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-1093907">
+            <path
+                d="M 0.0 0.0 L 4.652083333333334 1.6614583333333335 L 4.652083333333334 0.0 L 4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-5038587">
+            <path
+                d="M 0.0 0.0 L 4.652083333333334 1.6614583333333335 L 4.652083333333334 0.0 L 4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-7295415">
+            <path
+                d="M 0.0 0.0 L 4.652083333333334 1.6614583333333335 L 4.652083333333334 0.0 L 4.652083333333334 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+    </defs>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>0.95</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.2</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1855</latexdraw:width>
+                <latexdraw:height>1056</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>65.0</latexdraw:x>
+                <latexdraw:y>24.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

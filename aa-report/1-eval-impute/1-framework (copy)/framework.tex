@@ -1,9 +1,12 @@
+% \documentclass{IEEEtran} 
 \documentclass{IEEEconf} 
 \usepackage{url}
 % \usepackage{hyperref}
 \usepackage{amssymb,amsmath}
+\usepackage{pdfpages}
+\usepackage{graphicx}
 
-\title{No solution? Evaluating Multiple Imputation} 
+\title{No solution? Clustering to Evaluate Multiple Imputation } 
 \author{Anthony S. Chapman, Dr Steven Turner, Dr. Wei Pang} 
 \begin{document} 
 	\maketitle{} 
@@ -81,6 +84,12 @@
 	% section a_solution (end)
 	\section{The Framework} % (fold)
 	\label{sec:the_framework}
+
+		\begin{figure}[!ht]
+			\caption{Framework flowchart}
+			\centering
+			\includegraphics[width=0.5\textwidth]{diagram.pdf}
+		\end{figure}
 		The process is as follows: Using a dataset with missing values, call this ``OD'', for original dataset, and an imputation technique, call this ``Imp'', you first analyse the missingness characteristics of ``OD'' to in order to apply them later. Then, create a new dataset by deleting any record from ``OD'', call this "CC", for complete cases. Using the missingness characteristics, we create more da
 
 		The proposed framework is as follows: In order to assess the effects of any imputation technique, the program will need a dataset with missing values, called ``D'', and an imputation method, called ``I''. Then the function ``I(x)'' is a function that takes a data with missing values and outputs an imputed dataset. 
