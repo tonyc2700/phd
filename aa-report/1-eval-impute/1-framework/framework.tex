@@ -72,14 +72,14 @@
 		% subsection which_imputation_is_best_for_me (end)
 	% section the_problems (end)
 
-
+ 
 
 	\section{Proposed Framework} % (fold)
 	\label{sec:proposed_framework}
 		\textbf{The idea:} The underlying concept is to create a benchmark out of all the records with no missing values and then create replicas out of the benchmark to mimic the original dataset by analysing how data is missing and create testing datasets by imposing the same missingness into the benchmark. We would then impute the testing datasets and analyse how far they have travelled from the benchmark. We can check how far imputation has taken the datasets from the benchmark by clustering the benchmark and the testing datasets. Like this we will be able to see the effects of any imputation technique on any dataset. 
 		\\
 		\indent \textbf{Stage 1:}
-		Firstly we need to create a benchmark dataset by extracting all the complete records, we call this dataset, Complete Cases. We then analysis the original dataset and find the 
+		Firstly we need to create a benchmark dataset by extracting all the complete records, we call this dataset, CC for Complete Cases. We then analysis the original dataset and find the the characteristics of missing data.
 		\begin{figure}[!ht]
 			\caption{Stage 1}
 			\centering
@@ -87,6 +87,7 @@
 		\end{figure}
 		\\
 		\indent \textbf{Stage 2:}
+		We then create n testing datasets by applying the same amounts of missingness from the original dataset to CC. Thus we are left with a benchmark dataset, CC, and n artificial datasets with missing data which follow the same structure as the original dataset, call these artMiss.i where i is a number from 1 to n. 
 		\begin{figure}[!ht]
 			\caption{Stage 2}
 			\centering
@@ -94,40 +95,31 @@
 		\end{figure}
 		\\
 		\indent \textbf{Stage 3:}
+		The next step will be to impute all artMissi's using the imputation method of choice, it is important to apply exactly the same procedure to all datasets in order to have reliable results. This will create n artificially complete datasets, called artComp.i where i is a number from 1 to n. 
 		\begin{figure}[!ht]
 			\caption{Stage 3}
 			\centering
-			\includegraphics[width=0.35\textwidth]{stage32.pdf}
+			\includegraphics[width=0.35\textwidth]{stage34.pdf}
 		\end{figure}
 		\\
 		\indent \textbf{Stage 4:}
+		In order to compare how far the imputation method has taken the original dataset, we will evaluate how far imputation has taken the dataset from the truth (truth being CC, our benchmark) using clustering methods. Thus we need to cluster our benchmark CC and all artificially complete datasets artComp.i $(\forall i \in [1,n]) $
+
+		we will combine all artComp.i into one dataset by averaging the information. All imputed variables will create one average variable and all the results that were there originally will be the same. By doing this will be able to comfortably compare this master artificially complete dataset with the benchmark CC. 
 		\begin{figure}[!ht]
 			\caption{Stage 4}
 			\centering
-			\includegraphics[width=0.35\textwidth]{stage42.pdf}
+			\includegraphics[width=0.35\textwidth]{stage5.pdf}
 		\end{figure}
 		\\
-		% \indent \textbf{Stage 5:}
-		% \begin{figure}[!ht]
-		% 	\caption{Stage 5}
-		% 	\centering
-		% 	\includegraphics[width=0.35\textwidth]{stage5.pdf}
-		% \end{figure}
-		% \\
-		% \indent \textbf{Stage 6:}
-		% \begin{figure}[!ht]
-		% 	\caption{Stage 6}
-		% 	\centering
-		% 	\includegraphics[width=0.35\textwidth]{stage6.pdf}
-		% \end{figure}
-		% \\
-		% \indent \textbf{Stage 7:}
-		% \begin{figure}[!ht]
-		% 	\caption{Stage 7}
-		% 	\centering
-		% 	\includegraphics[width=0.35\textwidth]{stage7.pdf}
-		% \end{figure}
-		% \\
+		\indent \textbf{Stage 5:}
+		Once we have averaged the imputed datasets, we will evaluate how far imputation has taken the dataset from the truth (truth being CC, our benchmark) by clustering both datasets using the same clustering algorithm. We will be able to compare the cluster results (such as cluster centres, cluster widths, dissimilarities etc..), we will then see how artComp has moved from CC. 
+		\begin{figure}[!ht]
+			\caption{Stage 5}
+			\centering
+			% \includegraphics[width=0.35\textwidth]{stage5.pdf}
+		\end{figure}
+		\\
 	% section proposed_framework (end)
 
 	\section{Discussion} % (fold)

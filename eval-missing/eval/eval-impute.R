@@ -71,7 +71,7 @@ evalImpute <- function(db, ...){
 	artCompClustInfo2 <- list(artCompleteClust2$clusinfo, artCompleteClust2$silinfo$clus.avg.widths, artCompleteClust2$silinfo$avg.width ,artCompleteClust2$medoids)
 	artCompClustInfo3 <- list(artCompleteClust3$clusinfo, artCompleteClust3$silinfo$clus.avg.widths, artCompleteClust3$silinfo$avg.width ,artCompleteClust3$medoids)
 	artCompClustInfo4 <- list(artCompleteClust4$clusinfo, artCompleteClust4$silinfo$clus.avg.widths, artCompleteClust4$silinfo$avg.width ,artCompleteClust4$medoids)
-	#
+	# Find distance from complete to averaged artificial 
 	completeClust$medoids
 	artCompleteClust1$medoids
 	artCompleteClust2$medoids
