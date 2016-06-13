@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.14)  3 FEB 2016 10:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.14)  8 JUN 2016 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,12 +279,6 @@ LaTeX Warning: Label `sub:possible_solution' multiply defined.
 
 LaTeX Warning: Label `sub:possible_solution' multiply defined.
 
-
-LaTeX Warning: Label `sec:conclusion' multiply defined.
-
-
-LaTeX Warning: Label `sec:discussion' multiply defined.
-
 )
 \openout1 = `framework.aux'.
 
@@ -433,130 +427,123 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: Citation `ep2' on page 1 undefined on input line 45.
+] [2]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 128.
 
-
-LaTeX Warning: Citation `ep3' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation `ep4' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation `ep5' on page 1 undefined on input line 45.
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 48--51
-[] []|\OT1/ptm/b/n/10 3.1.1. Pos-si-ble So-lu-tion: Im-pu-ta-tion.[] \OT1/ptm/m
-/it/10 Im-pu-ta-tion
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 84.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 84.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 128.
 
-<stage1.pdf, id=9, 291.82025pt x 180.2735pt>
+<stage1.pdf, id=12, 291.82025pt x 180.53447pt>
 File: stage1.pdf Graphic file (type pdf)
  <use stage1.pdf>
-Package pdftex.def Info: stage1.pdf used on input line 86.
-(pdftex.def)             Requested size: 164.4171pt x 101.57138pt.
+Package pdftex.def Info: stage1.pdf used on input line 130.
+(pdftex.def)             Requested size: 164.4171pt x 101.71841pt.
 
-<stage22.pdf, id=10, 329.94266pt x 226.91777pt>
+<stage22.pdf, id=13, 329.94266pt x 226.91777pt>
 File: stage22.pdf Graphic file (type pdf)
  <use stage22.pdf>
-Package pdftex.def Info: stage22.pdf used on input line 94.
+Package pdftex.def Info: stage22.pdf used on input line 138.
 (pdftex.def)             Requested size: 164.4171pt x 113.07773pt.
 
-<stage34.pdf, id=11, 329.3404pt x 96.3299pt>
-File: stage34.pdf Graphic file (type pdf)
- <use stage34.pdf>
-Package pdftex.def Info: stage34.pdf used on input line 102.
-(pdftex.def)             Requested size: 164.4171pt x 48.09132pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
- [2 <./stage1.pdf> <./stage22.pdf> <./stage34.pdf>]
-<stage5.pdf, id=35, 342.51964pt x 344.61748pt>
-File: stage5.pdf Graphic file (type pdf)
- <use stage5.pdf>
-Package pdftex.def Info: stage5.pdf used on input line 112.
-(pdftex.def)             Requested size: 164.4171pt x 165.42502pt.
+<stage3-2.pdf, id=14, 330.84602pt x 225.41214pt>
+File: stage3-2.pdf Graphic file (type pdf)
+ <use stage3-2.pdf>
+Package pdftex.def Info: stage3-2.pdf used on input line 146.
+(pdftex.def)             Requested size: 164.4171pt x 112.01788pt.
+ [3 <./stage1.pdf> <./stage22.pdf>] <stage4-2.pdf, id=37, 343.69405pt x 344.617
+48pt>
+File: stage4-2.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--124
+<use stage4-2.pdf>
+Package pdftex.def Info: stage4-2.pdf used on input line 157.
+(pdftex.def)             Requested size: 164.4171pt x 164.8571pt.
+ <stage5-2.pdf, id=38, 318.97168pt x 198.87299pt>
+File: stage5-2.pdf Graphic file (type pdf)
 
- []
+<use stage5-2.pdf>
+Package pdftex.def Info: stage5-2.pdf used on input line 169.
+(pdftex.def)             Requested size: 164.4171pt x 102.51024pt.
 
-<diagram.pdf, id=36, 521.4983pt x 602.26004pt>
-File: diagram.pdf Graphic file (type pdf)
- <use diagram.pdf>
-Package pdftex.def Info: diagram.pdf used on input line 142.
-(pdftex.def)             Requested size: 234.87749pt x 271.25345pt.
-
-Overfull \hbox (13.55061pt too wide) in paragraph at lines 142--143
- [][] 
+Underfull \hbox (badness 1194) in paragraph at lines 163--173
+\OT1/ptm/m/it/10 val-ues are close enough to rep-re-sent the truth or
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 163--173
 
- [3 <./stage5.pdf> <./diagram.pdf>] (./framework.bbl
+ []
+
+(./framework.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 18.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
 
-Underfull \hbox (badness 6047) in paragraph at lines 49--53
+Underfull \hbox (badness 2384) in paragraph at lines 15--19
+[]\OT1/ptm/m/n/9 The Anal-y-sis Fac-tor.  Miss-ing data mech-a-nisms:
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 15--19
+\OT1/ptm/m/n/9 A primer.  2013 (ac-cessed: Febru-ary 22, 2016).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+\OT1/pcr/m/n/9 http : / / www . theanalysisfactor . com /
+ []
+
+[4 <./stage3-2.pdf> <./stage4-2.pdf> <./stage5-2.pdf>]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+
+Underfull \hbox (badness 6047) in paragraph at lines 85--89
 []\OT1/ptm/m/n/9 ScienceDaily.  Big data, for bet-ter or worse.
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 49--53
+Underfull \hbox (badness 5756) in paragraph at lines 85--89
 \OT1/ptm/m/n/9 2013 (ac-cessed: Jan-uary 18, 2016).  $\OT1/pcr/m/n/9 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--53
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 \OT1/pcr/m/n/9 / / www . sciencedaily . com / releases / 2013 /
  []
 
-) [4
+) [5
 
 ] (./framework.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4803 strings out of 493304
- 65586 string characters out of 6139871
- 143481 words of memory out of 5000000
- 8135 multiletter control sequences out of 15000+600000
- 46778 words of font info for 100 fonts, out of 8000000 for 9000
+ 4802 strings out of 493304
+ 65665 string characters out of 6139871
+ 144543 words of memory out of 5000000
+ 8140 multiletter control sequences out of 15000+600000
+ 43206 words of font info for 94 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,39p,843b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,39p,970b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -567,10 +554,10 @@ hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on framework.pdf (4 pages, 143852 bytes).
+Output written on framework.pdf (5 pages, 626125 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

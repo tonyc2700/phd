@@ -11,6 +11,21 @@ Alan~C. Cock.
 \newblock Working with missing values.
 \newblock {\em Journal of Marriage and Family}, 174(67):1012–1028, 2005.
 
+\bibitem{reason}
+The~Analysis Factor.
+\newblock Missing data mechanisms: A primer.
+\newblock 2013 (accessed: February 22, 2016).
+\newblock \url{http://www.theanalysisfactor.com/causes-of-missing-data/}.
+
+\bibitem{rountine-missing}
+Ana~S. Fernandes, Ian~H. Jarman, Terence~A. Etchells, Jos{\'{e}}~Manuel
+  Fonseca, Elia Biganzoli, Chris Bajdik, and Paulo J.~G. Lisboa.
+\newblock Stratification methodologies for neural networks models of survival.
+\newblock In {\em Bio-Inspired Systems: Computational and Ambient Intelligence,
+  10th International Work-Conference on Artificial Neural Networks, {IWANN}
+  2009, Salamanca, Spain, June 10-12, 2009. Proceedings, Part {I}}, pages
+  989--996, 2009.
+
 \bibitem{gelman2007data}
 A.~Gelman and J.~Hill.
 \newblock {\em Data Analysis Using Regression and Multilevel/Hierarchical
@@ -29,6 +44,27 @@ SPSS Inc.
 \newblock {\em SPSS Statistics for Windows, Version 17.0.}
 \newblock Chicago: SPSS Inc, 2008.
 \newblock \url{http://www-01.ibm.com/software/uk/analytics/spss}.
+
+\bibitem{systematic1}
+Amalia Karahalios, Laura Baglietto, John~B Carlin, Dallas~R English, and
+  Julie~A Simpson.
+\newblock A review of the reporting and handling of missing data in cohort
+  studies with repeated assessment of exposure measures.
+\newblock {\em BMC Medical Research Methodology}, 2012.
+
+\bibitem{impact}
+Amalia Karahalios, Laura Baglietto, Katherine~J Lee, Dallas~R English, John~B
+  Simpson, Carlin, and Julie A.
+\newblock The impact of missing data on analyses of a time-dependent exposure
+  in a longitudinal cohort: a simulation study.
+\newblock {\em Emerging Themes in Epidemiology}, 2013.
+
+\bibitem{systematic2}
+Katya~L Masconi, Tandi~E Matsha, Justin~B Echouffo-Tcheugui, Rajiv~T Erasmus,
+  and Andre~P Kengnecorresponding.
+\newblock Reporting and handling of missing data in predictive research for
+  prevalent undiagnosed type 2 diabetes mellitus: a systematic review.
+\newblock {\em The EPMA Journal}, 2015.
 
 \bibitem{missing1}
 Therese~D. Pigott.
@@ -56,6 +92,11 @@ Anoop~D. Shah and Jonathan~W. Bartlett.
 \newblock Comparison of parametric and random forest mice in imputation of
   missing data in survival analysis.
 \newblock 2014.
+
+\bibitem{systematic3}
+Leigh Tooth, Robert Ware, Chris Bain, David~M. Purdie, and Annette Dobson.
+\newblock Quality of reporting of observational longitudinal research.
+\newblock {\em PRACTICE OF EPIDEMIOLOGY}, 2005.
 
 \bibitem{mice}
 Stef {van Buuren} and Karin Groothuis-Oudshoorn.

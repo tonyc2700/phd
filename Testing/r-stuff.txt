@@ -48,3 +48,25 @@ md.pattern(db)
 md.pairs(db)
 
 ##
+
+sed & awk for linux stuff
+
+## Save plot
+> jpeg('rplot.jpg')
+> plot(x,y)
+> dev.off()
+
+
+df[, colSums(is.na(df)) < nrow(df) * 0.5]
+
+## Find which columns have more than percentage of missingness 
+colMeans(is.na(mydf)) > .15
+
+## Only keep comlumns with smaller or equal percentage
+final <- mydf[, colMeans(is.na(mydf)) <= .15]
+
+## Add dataframe B to the end of dataframe A
+total <- rbind(data frameA, data frameB)
+
+
+

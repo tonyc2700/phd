@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex framework"] 1454495425 "framework.aux" "framework.bbl" "framework" 1454931761
-  "../papers.bib" 1453888882 2838 82cb57693d6b853210e284cef0edefb7 ""
+["bibtex framework"] 1465378762 "framework.aux" "framework.bbl" "framework" 1465380045
+  "../papers.bib" 1464710258 5303 209b374fbeeb70303197205622520549 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "framework.aux" 1454495473 2983 2cbcc6fd0214dae79686cecb597c18ed ""
+  "framework.aux" 1465380045 3286 11bcb8efd5128cf5ce87626f7e1dfa1b ""
   "framework.bcf" 0 -1 0 ""
   (generated)
-  "framework.bbl"
   "framework.blg"
-["pdflatex"] 1454495473 "framework.tex" "framework.pdf" "framework" 1454931761
+  "framework.bbl"
+["pdflatex"] 1465380045 "framework.tex" "framework.pdf" "framework" 1465380045
   "/etc/texmf/web2c/texmf.cnf" 1452796654 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -32,8 +32,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm" 1136768653 1520 ad7b3c1a480a03b3e41b5fbb13d938f2 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -111,16 +109,16 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1452796844 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1452796783 3822874 d5e2f78b3f7a3331c52ddae743cf621c ""
-  "diagram.pdf" 1453816462 15784 d49398b34067b45bd4e94532c61ede07 ""
-  "framework.aux" 1454495473 2983 2cbcc6fd0214dae79686cecb597c18ed ""
-  "framework.bbl" 1454495425 2259 4812e8236221526947ab78a02103e9b7 "bibtex framework"
-  "framework.tex" 1454495473 16189 eece5c907667ec16d57ba5a9b398810a ""
-  "stage1.pdf" 1453902512 7776 faeac8f72ea5c3d8c01c5b4adc8158ee ""
-  "stage22.pdf" 1453903722 6862 836f06aabbcd34b3cba94b83c1fa985d ""
-  "stage34.pdf" 1454494550 6188 b608690cc4fe549f6bc29fb7172bce41 ""
-  "stage5.pdf" 1454495062 7208 d16f1c56551313f76ae507527efd240f ""
+  "framework.aux" 1465380045 3286 11bcb8efd5128cf5ce87626f7e1dfa1b ""
+  "framework.bbl" 1465378762 4107 9835b578d153442bf34161b22beecbd6 "bibtex framework"
+  "framework.tex" 1465380044 26850 b35ad77806cef82c8d6ede7835a7329a ""
+  "stage1.pdf" 1464717390 7781 2d76397744573ec61555c9460642d7ff ""
+  "stage22.pdf" 1464717513 6869 a57d898b6c02e3c4bc6fbe55d3fa19a2 ""
+  "stage3-2.pdf" 1464717594 6736 9e73df08766182ce56eca59013e18b66 ""
+  "stage4-2.pdf" 1464717635 212913 b4a1d07146caa22551c6c3e8f5f45ede ""
+  "stage5-2.pdf" 1464711957 279629 10a71ff943fbd3f899f77a1ba3ae9fc4 ""
   (generated)
   "framework.out"
-  "framework.log"
   "framework.aux"
+  "framework.log"
   "framework.pdf"

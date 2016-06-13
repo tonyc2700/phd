@@ -1,0 +1,29 @@
+Gender - babies gender
+Stones-H - Stones database height at age "AgeAtResult" in cm 
+Stones-W - Weight at ages as above in kg 
+BMI - Height cm/ weight kg all squared
+SDS_height - z score of height (statistical z-score) for height
+SDS_weight - zscore of weight as above
+Centile_Height -
+Centile_Weighth - 
+Centile_BMI - How we define overweight which centile its at 
+IOTFgrade - International obesity task force - 0 healthy, 1
+motherID - check for siblings
+ageAtResults - mean is 5 years 
+MatHyper - High blood pressure, smaller babies 
+Smoking - yes = 1, no = 0
+PatOcc - mother occupotion 
+AMND_heght - 
+AMND_weight - 
+AgeDel - age at delivery
+HBOCC - husband occupation
+Depcat - deprovation category, 1 = most affluent, 6 = least affluent, 7 is extreme not in ABerdeen
+Parity - number of live born children 
+Gestn - gestation at delivery
+BabyWt - baby weight in grams 
+CHLength - crown heel length cm 
+BabyOFC - Ox frontal circ head 
+MaternalGestBooking - >16 and maternal weight is invalid
+ScanGest_1 - days of gestation of first
+ScanGest_Weeks - weeks
+ScanGest
