@@ -56,6 +56,9 @@ sed & awk for linux stuff
 > plot(x,y)
 > dev.off()
 
+## View a string as an object 
+get("string")
+
 
 df[, colSums(is.na(df)) < nrow(df) * 0.5]
 

@@ -46,6 +46,31 @@ meanImpute <- function(df){
 	return(df)
 }
 
+
+meanImpute2 <- function(df){
+	df <- transform(df, y <- ifelse(is.na(y), mean(y, na.rm=TRUE), y))
+	return(df)
+}
+
+meanImpute3 <- function(dat){
+	for (i in which(sapply(dat, is.numeric))) {
+    	for (j in which(is.na(dat[, i]))) {
+        	dat[j, i] <- mean(dat[dat[, "taxa"] == dat[j, "taxa"], i],  na.rm = TRUE)
+    	}
+	}
+	return(dat)
+}
+
+meanImpute4 <- function(data){
+	for(i in 1:ncol(data)){
+	  data[is.na(data[,i]), i] <- mean(data[,i], na.rm = TRUE)
+	}
+	for(i in 1:ncol(data)){
+	  data[is.na(data[,i]), i] <- mean(data[,i], na.rm = TRUE)
+	}
+	return(data)
+}
+
 # Main evaluation of applying MICE to any dataset
 evalImpute <- function(db, ...){
 	completeDB <- completeData(db)
